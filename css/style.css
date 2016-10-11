@@ -17,85 +17,94 @@ body {
 /*--------------------css for header--------------------*/
 
 header {
-  height: 75px;
+  box-sizing: border-box;
+  width: 1151px;
+  min-height: 75px;
+  margin: 0 auto;
+  margin-top: 10px;
 }
 
 .header-logo {
-  display: inline-block;
   float: left;
-  margin-top: 10px;
-  margin-left: 22px;
+  margin-left: -5px;
   background-color: #b0d5c4;
 }
 
 .main-navigation {
-  display: inline-block;
 	float: left;
+  box-sizing: border-box;
   width: 410px;
-  margin-top: 20px;
+  margin-top: 18px;
+  padding: 5px;
   background-color: #b0d5c4;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 .main-navigation li {
   display: inline-block;
+  vertical-align: middle;
   margin-left: 25px;
   background-color: #b055c4;
 }
 
-.main-navigation li:first-child {
-  margin-left: 0px;
-}
-
 .user-panel {
-  display: inline-block;
 	float: right;
+  box-sizing: border-box;
   width: 550px;
   height: 32px;
+  margin-top: 15px;
   text-align: right;
-  margin-top: 25px;
-  margin-right: 27px;
   background-color: #b0d5c4;
 }
 
 .user-panel-search {
   display: inline-block;
+  vertical-align: middle;
   box-sizing: border-box;
-  width: 30px;
+  min-width: 30px;
   height: 32px;
-  text-align: center;
-  vertical-align: top;
   padding-top: 6px;
+  text-align: center;
   background-color: #9d51a6;
 }
 
 .user-panel-login {
   display: inline-block;
+  vertical-align: middle;
   box-sizing: border-box;
-  width: 95px;
+  min-width: 95px;
   height: 32px;
-  text-align: center;
-  padding-top: 6px;
   margin-left: 10px;
+  padding-top: 6px;
+  text-align: center;
   background-color: #9d51a6;
 }
 
 .user-panel-cart {
   display: inline-block;
+  vertical-align: middle;
   box-sizing: border-box;
   width: 115px;
   height: 32px;
-  text-align: center;
-  padding-top: 6px;
   margin-left: 10px;
+  padding-top: 6px;
+  text-align: center;
   background-color: #9d51a6;
 }
 
 .header-inf {
-	float: right;
-  width: 168px;
-  height: 39px;
+  position: absolute;
+  top: 65px;
+  left: 981px;
+  float: right;
+  width: 200px;
+  height: 50px;
   text-align: right;
-  margin-top: 15px;
+  margin: 0;
   margin-right: 27px;
   background-color: #b0d5c4;
 }
@@ -104,26 +113,37 @@ header {
 
 /*--------------------css for index.html--------------------*/
 
-.slider {
-  background-color: #b0d5c4;
-  text-align: center;
+main {
   width: 1146px;
-  margin-left: 27px;
-  margin-right: 27px;
+  margin: 0 auto;
+}
+
+.slider {
+  margin-bottom: 35px;
+  padding: 5px 0px;
+  text-align: center;
+  background-color: #b0d5c4;
+}
+
+.promo {
+  margin: 0;
 }
 
 .slide-bar {
   float: left;
 }
 
+.present {
+  margin-bottom: 40px;
+}
+
 .present-left {
   float: left;
   box-sizing: border-box;
   width: 560px;
-  height: 230px;
-  padding: 23px 20px;
-  margin-left: 27px;
+  min-height: 230px;
   margin-right: 26px;
+  padding: 23px 20px;
   background-color: #b0d5c4;
 }
 
@@ -133,23 +153,25 @@ header {
   width: 560px;
   height: 230px;
   padding: 23px 20px;
-  margin-right: 27px;
   background-color: #b0d5c4;
 }
 
 .popular {
-  margin: 40px 25px;
+  margin-bottom: 35px;
+  padding: 5px 0px;
+  font-size: 0px;
   background-color: #b0d5c4;
 }
 
 .popular-item {
   display: inline-block;
+  vertical-align: top;
   box-sizing: border-box;
   width: 267px;
-  height: 322px;
+  min-height: 322px;
+  margin-right: 26px;
+  font-size: 12px;
   text-align: center;
-  vertical-align: top;
-  margin-right: 24px;
   background-color: #b0d5c4;
 }
 
@@ -159,36 +181,45 @@ header {
 
 .features {
   box-sizing: border-box;
-  width: 1146px;
-  height: 305px;
-  padding: 30px 19px;
-  margin: 27px;
+  min-height: 305px;
+  margin-bottom: 40px;
+  padding: 25px 15px;
+  font-size: 0px;
   background-color: #b0d5c4;
+}
+
+h3 {
+  margin: 0;
 }
 
 .feature-item {
   display: inline-block;
-  box-sizing: border-box;
-  width: 540px;
-  height: 80px;
   vertical-align: top;
-  margin-right: 25px;
+  box-sizing: border-box;
+  width: 550px;
+  min-height: 80px;
+  margin-right: 16px;
   margin-bottom: 6px;
+  padding: 5px;
+  font-size: 12px;
   background-color: #9d51a6;
 }
 
-.feature-item:nth-child(2n-1) {
+.feature-item:nth-child(2n) {
   margin-right: 0px;
+}
+
+.blog-and-subscribe {
+  margin-bottom: 40px;
 }
 
 .blog {
   float: left;
   box-sizing: border-box;
   width: 560px;
-  height: 230px;
-  padding: 23px 20px;
-  margin-left: 27px;
+  min-height: 230px;
   margin-right: 26px;
+  padding: 23px 20px;
   background-color: #b0d5c4;
 }
 
@@ -196,15 +227,16 @@ header {
   float: right;
   box-sizing: border-box;
   width: 560px;
-  height: 230px;
+  min-height: 230px;
   padding: 23px 20px;
-  margin-right: 27px;
   background-color: #b0d5c4;
 }
 
 .contact-us {
+  width: 1200px;
   height: 428px;
-  margin-top: 40px;
+  margin-left: -27px;
+  margin-bottom: 30px;
   background-color: #b0d5c4;
 }
 
@@ -224,9 +256,8 @@ header {
 /*--------------------css for catalog.html--------------------*/
 
 .breadcrumbs {
-  width: 1146px;
-  height: 15px;
-  margin: 25px 27px 0px 27px;
+  min-height: 15px;
+  margin-bottom: 0px;
   background-color: #b0d5c4;
 }
 
@@ -236,33 +267,34 @@ header {
 }
 
 h1 {
-  display: inline-block;
-  margin-left: 27px;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
   background-color: #b0d5c4;
 }
 
 .filter {
-  margin-top: 15px;
-  margin-left: 27px;
-  width: 880px;
-  height: 135px;
+  width: auto;
+  min-height: 135px;
+  margin-bottom: 40px;
+  padding: 5px;
   background-color: #b0d5c4;
 }
 
 .catalogue {
-  margin-top: 40px;
-  margin-right: 25px;
-  margin-left: 25px;
+  font-size: 0px;
   background-color: #b0d5c4;
 }
 
 .catalogue-item {
   display: inline-block;
-  width: 267px;
-  height: 325px;
   vertical-align: top;
-  margin-top: 30px;
-  margin-right: 24px;
+  box-sizing: border-box;
+  width: 267px;
+  min-height: 325px;
+  margin-right: 26px;
+  margin-bottom: 40px;
+  font-size: 12px;
   background-color: #9d51a6;
 }
 
@@ -271,7 +303,8 @@ h1 {
 }
 
 .pages {
-  margin-top: 75px;
+  margin-top:35px;
+  margin-bottom: 25px;
   text-align: right;
   background-color: #9d51a6;
 }
@@ -279,42 +312,52 @@ h1 {
 
 /*--------------------css for footer--------------------*/
 
-.footer {
-  height: 100px;
+footer {
+  width: 1146px;
+  min-height: 100px;
+  margin: 0 auto;
 }
 
 .footer-social {
   float: left;
-  display: inline-block;
+  box-sizing: border-box;
   width: 270px;
-  height: 40px;
-  margin-top: 35px;
-  margin-left: 27px;
+  min-height: 40px;
+  margin-right: 125px;
+  padding: 5px;
+  font-size: 0px;
   background-color: #b0d5c4;
+}
+
+.social-btn {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
 }
 
 .footer-about-us {
   float: left;
-  display: inline-block;
-  width: 330px;
-  height: 40px;
-  margin-top: 35px;
-  margin-left: 130px;
+  box-sizing: border-box;
+  width: 320px;
+  min-height: 40px;
+  padding: 5px;
   background-color: #b0d5c4;
 }
 
 .footer-about-us li {
   display: inline-block;
+  vertical-align: top;
   background-color: #b055c4;
 }
 
 .footer-copyright {
   float: right;
-  display: inline-block;
-  width: 190px;
-  height: 60px;
-  margin-top: 18px;
-  margin-right: 27px;
+  box-sizing: border-box;
+  width: 267px;
+  min-height: 50px;
+  margin-top: -15px;
+  padding: 5px;
+  text-align: right;
   background-color: #b0d5c4;
 }
 

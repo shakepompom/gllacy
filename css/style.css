@@ -1,11 +1,13 @@
 body {
-  font-size: 12px;
-  line-height: 1.5;
-  color: white;
-  font-family: sans-serif;
+  min-width: 900px;
+  font-size: 16px;
+  line-height: 22px;
   font-weight: bold;
-  background-color: #b4b4b4;
-  width: 1200px;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: white;
+  /* TODO: background:  */
+  /*background: #849d8f url("../images/slider-1.png") no-repeat center top;*/
+  background-color: #9aaea3;
 }
 
 .clearfix::after {
@@ -14,20 +16,32 @@ body {
   clear: both;
 }
 
+a {
+  color: white;
+}
+
+p,
+ul,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
 /*--------------------css for header--------------------*/
 
 header {
+  position: relative;
   box-sizing: border-box;
   width: 1151px;
   min-height: 75px;
   margin: 0 auto;
-  margin-top: 10px;
 }
 
 .header-logo {
   float: left;
   margin-left: -5px;
-  background-color: #b0d5c4;
 }
 
 .main-navigation {
@@ -35,20 +49,17 @@ header {
   box-sizing: border-box;
   width: 410px;
   margin-top: 18px;
-  padding: 5px;
-  background-color: #b0d5c4;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
+  padding: 3px;
+  padding-left: 5px;
+  font-size: 16px;
+  line-height: 18px;
 }
 
 .main-navigation li {
   display: inline-block;
   vertical-align: middle;
   margin-left: 25px;
-  background-color: #b055c4;
+  color: white;
 }
 
 .user-panel {
@@ -58,7 +69,13 @@ ul {
   height: 32px;
   margin-top: 15px;
   text-align: right;
-  background-color: #b0d5c4;
+}
+
+.user-panel a {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  text-decoration: none;
 }
 
 .user-panel-search {
@@ -67,9 +84,9 @@ ul {
   box-sizing: border-box;
   min-width: 30px;
   height: 32px;
+  margin-right: 10px;
   padding-top: 6px;
   text-align: center;
-  background-color: #9d51a6;
 }
 
 .user-panel-login {
@@ -78,10 +95,9 @@ ul {
   box-sizing: border-box;
   min-width: 95px;
   height: 32px;
-  margin-left: 10px;
+  margin-right: 10px;
   padding-top: 6px;
   text-align: center;
-  background-color: #9d51a6;
 }
 
 .user-panel-cart {
@@ -90,23 +106,29 @@ ul {
   box-sizing: border-box;
   width: 115px;
   height: 32px;
-  margin-left: 10px;
   padding-top: 6px;
   text-align: center;
-  background-color: #9d51a6;
 }
 
 .header-inf {
   position: absolute;
   top: 65px;
-  left: 981px;
-  float: right;
+  right: -27px;
   width: 200px;
   height: 50px;
-  text-align: right;
   margin: 0;
   margin-right: 27px;
-  background-color: #b0d5c4;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: right;
+}
+
+.phone-number {
+  margin: 0;
+  margin-top: 5px;
+  padding: 0;
+  font-size: 22px;
+  line-height: 24px;
 }
 
 /*--------------------css for header ends--------------------*/
@@ -119,18 +141,40 @@ main {
 }
 
 .slider {
-  margin-bottom: 35px;
-  padding: 5px 0px;
+  position: relative;
+  min-height: 540px;
+  margin-bottom: 25px;
   text-align: center;
-  background-color: #b0d5c4;
 }
 
-.promo {
+.slider-name {
+  position: absolute;
+  bottom: 110px;
+  left: 240px;
   margin: 0;
+  font-size: 60px;
+  line-height: 60px;
+}
+
+.add-to-cart {
+  text-decoration: none;
+  background-color: #ec593c;
+}
+
+.slider .add-to-cart {
+  position: absolute;
+  bottom: 15px;
+  left: 435px;
+  width: 280px;
+  height: 65px;
+  font-size: 32px;
+  line-height: 44px;
 }
 
 .slide-bar {
-  float: left;
+  position: absolute;
+  bottom: 40px;
+  left: 0;
 }
 
 .present {
@@ -138,45 +182,93 @@ main {
 }
 
 .present-left {
+  position: relative;
   float: left;
   box-sizing: border-box;
   width: 560px;
   min-height: 230px;
   margin-right: 26px;
-  padding: 23px 20px;
-  background-color: #b0d5c4;
+  padding: 20px;
+  border-radius: 10px;
+  background: #7b0213 url("../images/bg-respberries.png") no-repeat center top;
 }
 
 .present-right {
+  position: relative;
   float: right;
   box-sizing: border-box;
   width: 560px;
   height: 230px;
-  padding: 23px 20px;
-  background-color: #b0d5c4;
+  padding: 20px;
+  border-radius: 10px;
+  background: #4b2a1b url("../images/bg-chocolate.png") no-repeat center top;
+}
+
+.present .add-to-cart {
+  position: absolute;
+  box-sizing: border-box;
+  bottom: 20px;
+  right: 20px;
+  min-width: 165px;
+  height: 45px;
+  padding: 10px 20px;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 35px;
+  line-height: 41px;
 }
 
 .popular {
+  box-sizing: border-box;
+  width: 1172px;
+  margin: 0 auto;
   margin-bottom: 35px;
-  padding: 5px 0px;
-  font-size: 0px;
-  background-color: #b0d5c4;
+  margin-left: -13px;
+  font-size: 0;
 }
 
 .popular-item {
+  position: relative;
   display: inline-block;
-  vertical-align: top;
   box-sizing: border-box;
-  width: 267px;
+  width: 293px;
   min-height: 322px;
-  margin-right: 26px;
+  padding: 5px 13px;
   font-size: 12px;
+  vertical-align: top;
   text-align: center;
-  background-color: #b0d5c4;
 }
 
-.popular-item:last-child {
-  margin-right: 0px;
+.hit {
+  position: absolute;
+  top: 5px;
+  left: 13px;
+}
+
+p.price {
+  position: absolute;
+  top: 210px;
+  left: 13px;
+  font-size: 30px;
+  line-height: 45px;
+}
+
+span.price {
+  font-size: 46px;
+  line-height: 45px;
+}
+
+.popular-item-name {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  text-align: center;
 }
 
 .features {
@@ -184,15 +276,22 @@ main {
   min-height: 305px;
   margin-bottom: 40px;
   padding: 25px 15px;
-  font-size: 0px;
-  background-color: #b0d5c4;
+  border-radius: 10px;
+  font-size: 0;
+  background: #ede0c2 url("../images/bg-wafer.png") no-repeat center top;
 }
 
 h3 {
-  margin: 0;
+  margin-bottom: 5px;
+  padding-left: 5px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+  color: black;
 }
 
 .feature-item {
+  position: relative;
   display: inline-block;
   vertical-align: top;
   box-sizing: border-box;
@@ -202,11 +301,23 @@ h3 {
   margin-bottom: 6px;
   padding: 5px;
   font-size: 12px;
-  background-color: #9d51a6;
 }
 
 .feature-item:nth-child(2n) {
-  margin-right: 0px;
+  margin-right: 0;
+}
+
+.feature-item-name {
+  position: absolute;
+  top: 20px;
+  left: 60px;
+  margin: 0;
+  padding: 0;
+  padding-right: 5px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: black;
 }
 
 .blog-and-subscribe {
@@ -217,96 +328,135 @@ h3 {
   float: left;
   box-sizing: border-box;
   width: 560px;
-  min-height: 230px;
+  height: 220px;
   margin-right: 26px;
-  padding: 23px 20px;
-  background-color: #b0d5c4;
+  padding: 25px 20px;
+  border-radius: 10px;
+  font-weight: 500;
+  color: black;
+  background: #ffffff url("../images/bg-blog.png") no-repeat center top;
+}
+
+.new-in-blog {
+  display: block;
+  width: 290px;
+  margin-top: 8px;
+  font-size: 24px;
+  line-height: 30px;
+  color: black;
 }
 
 .subscribe {
   float: right;
   box-sizing: border-box;
   width: 560px;
-  min-height: 230px;
-  padding: 23px 20px;
-  background-color: #b0d5c4;
+  height: 220px;
+  padding: 35px 25px;
+  border-radius: 10px;
+  font-weight: 400;
+  color: black;
+  background: #f8f7f4 url("../images/bg-subscribe.png") no-repeat center top;
 }
 
 .contact-us {
+  position: relative;
   width: 1200px;
   height: 428px;
   margin-left: -27px;
   margin-bottom: 30px;
+  border-radius: 10px;
   background-color: #b0d5c4;
 }
 
 .contacts {
-  float: right;
+  position: absolute;
+  top: 50%;
+  right: 27px;
   box-sizing: border-box;
   width: 303px;
   height: 305px;
   padding: 30px 25px;
-  margin-top: 60px;
-  margin-right: 27px;
-  background-color: #9d51a6;
+  margin-top: -150px;
+  font-weight: 400;
+  color: black;
+  background-color: #ffffff;
 }
 
+.address-phone {
+  display: block;
+  margin: 5px 0;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+}
 /*--------------------css for index.html ends--------------------*/
 
 /*--------------------css for catalog.html--------------------*/
 
 .breadcrumbs {
   min-height: 15px;
-  margin-bottom: 0px;
-  background-color: #b0d5c4;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
 }
 
 .breadcrumbs li {
   display: inline-block;
-  background-color: #9d51a6;
+  margin-right: 8px;
 }
 
 h1 {
-  margin: 0;
-  margin-bottom: 30px;
-  padding: 0;
-  background-color: #b0d5c4;
+  margin-bottom: 15px;
+  padding: 10px 0;
+  font-size: 35px;
+  line-height: 41px;
 }
 
 .filter {
   width: auto;
   min-height: 135px;
   margin-bottom: 40px;
-  padding: 5px;
-  background-color: #b0d5c4;
+  padding: 5px 0;
+  font-weight: 500;
+  /*background-color: #b0d5c4;*/
 }
 
 .catalogue {
-  font-size: 0px;
-  background-color: #b0d5c4;
+  position: relative;
+  width: 1172px;
+  margin: 0 auto;
+  margin-left: -13px;
+  margin-bottom: 35px;
+  padding-bottom: 140px;
+  font-size: 0;
 }
 
 .catalogue-item {
+  position: relative;
   display: inline-block;
   vertical-align: top;
   box-sizing: border-box;
-  width: 267px;
+  width: 293px;
   min-height: 325px;
-  margin-right: 26px;
-  margin-bottom: 40px;
-  font-size: 12px;
-  background-color: #9d51a6;
+  margin-bottom: 35px;
+  padding: 5px 13px;
+  text-align: center;
 }
 
-.catalogue-item:nth-child(4n) {
-  margin-right: 0px;
+.catalogue-item-name {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  text-align: center;
 }
 
 .pages {
-  margin-top:35px;
-  margin-bottom: 25px;
-  text-align: right;
-  background-color: #9d51a6;
+  position: absolute;
+  bottom: 30px;
+  right: 0;
 }
 /*--------------------css for catalog.html ends--------------------*/
 
@@ -325,40 +475,57 @@ footer {
   min-height: 40px;
   margin-right: 125px;
   padding: 5px;
-  font-size: 0px;
+  font-size: 0;
   background-color: #b0d5c4;
 }
 
 .social-btn {
   display: inline-block;
   vertical-align: middle;
-  font-size: 12px;
+  /*font-size: 12px;*/
 }
 
 .footer-about-us {
+  position: relative;
   float: left;
   box-sizing: border-box;
-  width: 320px;
+  width: 340px;
   min-height: 40px;
-  padding: 5px;
-  background-color: #b0d5c4;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.about-us-left {
+  position: absolute;
+  top: 5px;
+  left: 25px;
+  display: block;
+}
+
+.about-us-right {
+  position: absolute;
+  top: 5px;
+  left: 170px;
+  display: block;
 }
 
 .footer-about-us li {
-  display: inline-block;
-  vertical-align: top;
-  background-color: #b055c4;
+  display: block;
+}
+
+.about-us-left li:first-child {
+  font-weight: bold;
 }
 
 .footer-copyright {
   float: right;
   box-sizing: border-box;
-  width: 267px;
+  width: 195px;
   min-height: 50px;
   margin-top: -15px;
-  padding: 5px;
-  text-align: right;
-  background-color: #b0d5c4;
+  font-size: 12px;
+  line-height: 18px;
 }
 
 .footer-logo {

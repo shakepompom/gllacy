@@ -1,0 +1,101 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-_ {
+    width: 11px;
+    height: 11px;
+    background-position: -5px -5px;
+}
+
+.sprite-cart {
+    width: 21px;
+    height: 20px;
+    background-position: -26px -5px;
+}
+
+.sprite-cart-full {
+    width: 21px;
+    height: 20px;
+    background-position: -57px -5px;
+}
+
+.sprite-enterence {
+    width: 21px;
+    height: 19px;
+    background-position: -88px -5px;
+}
+
+.sprite-enterence-selected {
+    width: 21px;
+    height: 19px;
+    background-position: -119px -5px;
+}
+
+.sprite-fb {
+    width: 32px;
+    height: 32px;
+    background-position: -88px -34px;
+}
+
+.sprite-feature-cow {
+    width: 48px;
+    height: 49px;
+    background-position: -5px -76px;
+}
+
+.sprite-feature-icecream {
+    width: 49px;
+    height: 49px;
+    background-position: -63px -76px;
+}
+
+.sprite-feature-leaf {
+    width: 49px;
+    height: 49px;
+    background-position: -150px -5px;
+}
+
+.sprite-feature-termometr {
+    width: 48px;
+    height: 49px;
+    background-position: -130px -64px;
+}
+
+.sprite-insta {
+    width: 32px;
+    height: 32px;
+    background-position: -188px -64px;
+}
+
+.sprite-ruble {
+    width: 31px;
+    height: 36px;
+    background-position: -188px -106px;
+}
+
+.sprite-search {
+    width: 17px;
+    height: 17px;
+    background-position: -5px -152px;
+}
+
+.sprite-search-hover {
+    width: 17px;
+    height: 17px;
+    background-position: -32px -152px;
+}
+
+.sprite-twitter {
+    width: 33px;
+    height: 32px;
+    background-position: -59px -152px;
+}
+
+.sprite-vk {
+    width: 32px;
+    height: 32px;
+    background-position: -102px -152px;
+}

@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Gllasy Shop</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <!-- font-family: "Roboto", "Arial", sans-serif; -->
+    <link href="normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
 
@@ -14,9 +17,9 @@
         </div>
         <nav class="main-navigation">
           <ul>
-            <li>Каталог</li>
-            <li>Доставка и оплата</li>
-            <li>О Компании</li>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Доставка и оплата</a></li>
+            <li><a href="#">О Компании</a></li>
           </ul>
         </nav>
         <div class="user-panel">
@@ -25,19 +28,22 @@
           <a class="user-panel-cart" href="#"><img src="images/cart-empty.svg" width="20" height="19" alt="Корзина">Пусто</a>
         </div>
         </div>
-        <p class="header-inf">
-            С 10 до 20, ежедневно<br>
-            8 812 450-25-25
-        </p>
+        <div class="header-inf">
+            С 10 до 20, ежедневно
+            <p class="phone-number">8 812 450-25-25</p>
+        <div>
     </header>
 
     <main class="container">
       <div class="slider">
         <!-- <img src="images/promo-icecream1.png" alt="Крем-брюле и пломбир с малиновым джемом" width="1045" height="881"> -->
-        <p class="promo">Крем-брюле и пломбир с малиновым джемом</p>
-        <button class="slide-bar"></button>
-        <button class="slide-bar"></button>
-        <button class="slide-bar"></button>
+        <p class="slider-name">Крем-брюле и пломбир<br>
+          с малиновым джемом</p>
+        <div class="slide-bar">
+          <button class="slide-bar-1"></button>
+          <button class="slide-bar-2"></button>
+          <button class="slide-bar-3"></button>
+        </div>
         <a class="btn add-to-cart" href="#">Давайте оба!</a>
       </div>
 
@@ -58,57 +64,65 @@
 
       <div class="popular">
         <div class="popular-item">
-          <img src="images/catalogue-item-11.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
-          <img src="images/hit.png" alt="Хит!" width="61" height="61">
-          <p><span class="price">310₽</span>/кг</p>
-          <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+          <a href="#">
+            <img src="images/catalogue-item-11.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
+            <img class="hit" src="images/hit.png" alt="Хит!" width="61" height="61">
+            <p class="price"><span class="price">310 </span>/кг</p>
+            <p class="popular-item-name">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+          </a>
         </div>
         <div class="popular-item">
-          <img src="images/catalogue-item-12.png" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
-          <img src="images/hit.png" alt="Хит!" width="61" height="61">
-          <p><span class="price">380₽</span>/кг</p>
-          <a href="#">Сливочно-кофейное с кусочками шоколада</a>
+          <a href="#">
+            <img src="images/catalogue-item-12.png" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
+            <img class="hit" src="images/hit.png" alt="Хит!" width="61" height="61">
+            <p class="price"><span class="price">380 </span>/кг</p>
+            <p class="popular-item-name">Сливочно-кофейное с кусочками шоколада</p>
+          </a>
         </div>
         <div class="popular-item">
-          <img src="images/catalogue-item-13.png" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
-          <img src="images/hit.png" alt="Хит!" width="61" height="61">
-          <p><span class="price">355₽</span>/кг</p>
-          <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+          <a href="#">
+            <img src="images/catalogue-item-13.png" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
+            <img class="hit" src="images/hit.png" alt="Хит!" width="61" height="61">
+            <p class="price"><span class="price">355 </span>/кг</p>
+            <p class="popular-item-name">Сливочно-клубничное с присыпкой из белого шоколада</p>
+          </a>
         </div>
         <div class="popular-item">
-          <img src="images/catalogue-item-14.png" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
-          <img src="images/hit.png" alt="Хит!" width="61" height="61">
-          <p><span class="price">415₽</span>/кг</p>
-          <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+          <a href="#">
+            <img src="images/catalogue-item-14.png" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
+            <img class="hit" src="images/hit.png" alt="Хит!" width="61" height="61">
+            <p class="price"><span class="price">415 </span>/кг</p>
+            <p class="popular-item-name">Сливочное крем-брюле с карамельной подливкой</p>
+          </a>
         </div>
       </div>
 
       <div class="features">
-        <h3>Магазин Глейси - это онлайн и офлайн магазин по продаже
-          мороженого собственного производства на развес</h3>
+        <h3>Магазин Глейси &mdash; это онлайн и офлайн магазин по продаже мороженого собственного
+          производства на развес</h3>
         <div class="feature-items">
           <div class="feature-item">
             <img src="images/feature-icecream.svg" width="47" height="47" alt="icecream">
-            <p>Все наше мороженое изготавливается на собственном производстве,
+            <p class="feature-item-name">Все наше мороженое изготавливается на собственном производстве,
               с использованием современного оборудования и проверенных временем
               технологий.</p>
           </div>
           <div class="feature-item">
             <img src="images/feature-cow.svg" width="47" height="47" alt="cow">
-            <p>Закупка ингридиентов производится только у проверенных фермерских
+            <p class="feature-item-name">Закупка ингридиентов производится только у проверенных фермерских
               хозяйств и компаний, с которыми нас связывает долговременное
               сотрудничество.</p>
           </div>
           <div class="feature-item">
             <img src="images/feature-leaf.svg" width="47" height="47" alt="leaf">
-            <p>Для приготовления мороженого используются настоящие сливки и
+            <p class="feature-item-name">Для приготовления мороженого используются настоящие сливки и
               молоко высочайшего качества. Все дополнительные ингридиенты и
               добавки произведены из натурального, экологически чистого
               сырья.</p>
           </div>
           <div class="feature-item">
             <img src="images/feature-termometr.svg" width="47" height="47" alt="termometr">
-            <p>Доставка нашего мороженого до заказчиков осуществляется в
+            <p class="feature-item-name">Доставка нашего мороженого до заказчиков осуществляется в
               специальном термопаке, который не дает мороженому растаять в пути
               и позволет сохранить превосходный вкус.</p>
           </div>
@@ -118,7 +132,7 @@
       <section class="blog-and-subscribe clearfix">
         <div class="blog">
           <p>Новое в нашем блоге</p>
-          <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
+          <a class="new-in-blog" href="#">10 способов сервировки фруктовых щербетов<br>к столу</a>
         </div>
         <div class="subscribe">
           <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего
@@ -136,14 +150,14 @@
           <p>
             Адрес главного офиса и<br>
             офлайн магазина:<br>
-            ул. Большая Конюшенная<br>
-            19/8, Санкт-Петербург<br>
-            Дла заказов по телефону:<br>
-            8 812 450-25-25<br>
+            <span class="address-phone">ул. Большая Конюшенная<br>
+            19/8, Санкт-Петербург</span><br>
+            Дла заказов по телефону:
+            <span class="address-phone">8 812 450-25-25</span>
             (С 10 до 20 ежедневно)
           </p>
           <form class="feedback" action="index.html" method="post">
-            <input type="submit" class="btn" value="Форма обратной связи">
+            <input class="btn" type="submit" value="Форма обратной связи">
           </form>
         </div>
       </section>
@@ -158,14 +172,18 @@
           <a class="social-btn facebook" href="#">Facebook</a>
           <a class="social-btn vk" href="#">ВКонтакте</a>
         </div>
+
         <div class="footer-about-us">
-          <ul>
-            <li><a class="footer-link" href="#"><img src="images/footer-heart.svg" width="14" height="12" alt="heart">Для поставщиков</a></li>
-            <li><a class="footer-link" href="#">Наши документы</a></li>
+          <ul class="about-us-left">
+            <li><a class="footer-link" href="#">Для поставщиков</a></li>
             <li><a class="footer-link" href="#">О производстве</a></li>
+          </ul>
+          <ul class="about-us-right">
+            <li><a class="footer-link" href="#">Наши документы</a></li>
             <li><a class="footer-link" href="#">Экологические стандарты</a></li>
           </ul>
         </div>
+
         <div class="footer-copyright">
           <a class="footer-logo" href="#">
             <img src="images/logo-html-academy.svg" alt="htmlacademy" width="107" height="36">

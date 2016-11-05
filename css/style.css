@@ -1,13 +1,13 @@
 body {
-  min-width: 900px;
+  min-width: 1200px;
   font-size: 16px;
   line-height: 22px;
   font-weight: bold;
   font-family: "Roboto", "Arial", sans-serif;
-  color: white;
+  color: #ffffff;
   /* TODO: background:  */
   /*background: #849d8f url("../images/slider-1.png") no-repeat center top;*/
-  background-color: #9aaea3;
+  background-color: #849d8f;
 }
 
 .clearfix::after {
@@ -17,19 +17,29 @@ body {
 }
 
 a {
-  color: white;
+  color: #ffffff;
 }
 
 p,
 ul,
 h1,
 h2,
-h3 {
+h3,
+form,
+select {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
-/*--------------------css for header--------------------*/
+.btn,
+input,
+button,
+select {
+  outline: none;
+}
+
+/*--------------------header--------------------*/
 
 header {
   position: relative;
@@ -39,76 +49,555 @@ header {
   margin: 0 auto;
 }
 
+
+
 .header-logo {
   float: left;
   margin-left: -5px;
 }
 
-.main-navigation {
+
+
+.main-menu {
 	float: left;
   box-sizing: border-box;
-  width: 410px;
-  margin-top: 18px;
+  width: 630px;
+  margin-top: 11px;
   padding: 3px;
   padding-left: 5px;
   font-size: 16px;
   line-height: 18px;
 }
 
-.main-navigation li {
+.main-menu > li {
+  position: relative;
   display: inline-block;
-  vertical-align: middle;
+  box-sizing: border-box;
+  height: 32px;
   margin-left: 25px;
-  color: white;
+  padding: 7px 0;
+  color: #ffffff;
+  vertical-align: top;
 }
 
+.main-menu li:hover > a {
+  margin: 0 -13px;
+  padding: 7px 13px;
+  border-radius: 16px;
+  text-decoration: none;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.main-menu li:active > a {
+  background-color: #ededed;
+}
+
+.main-menu li:hover .sub-menu,
+.main-menu li:active .sub-menu {
+  display: block;
+}
+
+.sub-menu {
+  position: absolute;
+  top: 37px;
+  left: -7px;
+  z-index: 10;
+  display: none;
+  box-sizing: border-box;
+  width: 145px;
+  height: 168px;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.main-menu .sub-menu a {
+  display: block;
+  box-sizing: border-box;
+  width: 145px;
+  height: 30px;
+  margin: 0;
+  padding: 7px 20px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #000000;
+}
+
+.main-menu .sub-menu .novelty {
+  height: 48px;
+  padding: 16px 20px;
+  font-weight: 700;
+}
+
+.main-menu .sub-menu a:hover {
+  width: 145px;
+  margin: 0;
+  padding-left: 20px;
+  border-radius: 0;
+  background: #fbded7;
+}
+
+.main-menu .sub-menu a:active {
+  background: #f6b5a5;
+}
+
+.main-menu .active {
+  background: #d07058;
+}
+
+.main-menu > .active {
+  padding: 7px 13px;
+  border-radius: 16px;
+}
+
+.main-menu > .active > a {
+  text-decoration: none;
+}
+
+
+
 .user-panel {
+  position: relative;
 	float: right;
   box-sizing: border-box;
-  width: 550px;
+  width: 350px;
   height: 32px;
   margin-top: 15px;
+  font-size: 0;
   text-align: right;
 }
 
 .user-panel a {
+  display: inline-block;
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
   text-decoration: none;
+  vertical-align: middle;
 }
 
 .user-panel-search {
-  display: inline-block;
-  vertical-align: middle;
+  position: relative;
   box-sizing: border-box;
-  min-width: 30px;
+  width: 32px;
   height: 32px;
   margin-right: 10px;
-  padding-top: 6px;
-  text-align: center;
+  border-radius: 16px;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.user-panel-search::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 8px;
+  width: 17px;
+  height: 17px;
+  background: url("../images/spritesheet.png") no-repeat -3px -478px;
+}
+
+.user-panel-search:hover {
+  color: #000000;
+  background: #ffffff;
+}
+
+.user-panel-search:hover::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 8px;
+  width: 17px;
+  height: 17px;
+  background: url("../images/spritesheet.png") no-repeat -3px -501px;
+}
+
+.user-panel-search:hover + form,
+.user-panel-search:active + form,
+.user-panel-search:focus + form {
+  display: block;
+}
+
+.user-panel form {
+  display: none;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background: #f8f7f4;
+}
+
+.user-panel form[name=search] {
+  position: absolute;
+  top: 35px;
+  right: 230px;
+  z-index: 10;
+  width: 340px;
+  height: 85px;
+  padding: 20px 15px;
+}
+
+.user-panel input {
+  box-sizing: border-box;
+  padding: 0 15px;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #999999;
+}
+
+form[name=search] input {
+  position: relative;
+  width: 310px;
+  height: 45px;
+}
+
+form[name=search] input:hover {
+  padding: 0 14px;
+  border: 2px solid #d3d3d2;
+}
+
+form[name=search] input:active {
+  border: 2px solid #5b9ddf;
+}
+
+form[name=search] input:focus {
+  border: 2px solid #5b9ddf;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+}
+
+form[name=search] input + p {
+  position: absolute;
+  top: 4px;
+  left: 30px;
+  display: none;
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: 400;
+  color: #5b9ddf;
+}
+
+form[name=search] input:focus + p {
+  display: block;
 }
 
 .user-panel-login {
-  display: inline-block;
-  vertical-align: middle;
+  position: relative;
   box-sizing: border-box;
-  min-width: 95px;
+  width: 95px;
   height: 32px;
   margin-right: 10px;
-  padding-top: 6px;
-  text-align: center;
+  padding: 8px;
+  padding-left: 45px;
+  border-radius: 16px;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
-.user-panel-cart {
-  display: inline-block;
-  vertical-align: middle;
+.user-panel-login::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 15px;
+  width: 21px;
+  height: 19px;
+  background: url("../images/spritesheet.png") no-repeat -3px -386px;
+}
+
+.user-panel-login:hover {
+  color: #000000;
+  background: #ffffff;
+}
+
+.user-panel-login:hover::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 15px;
+  width: 21px;
+  height: 19px;
+  background: url("../images/spritesheet.png") no-repeat -3px -411px;
+}
+
+.user-panel-login:hover + form,
+.user-panel-login:active + form,
+.user-panel-login:focus + form {
+  display: block;
+}
+
+.user-panel form[name=login] {
+  position: absolute;
+  top: 35px;
+  right: 125px;
+  z-index: 10;
+  width: 280px;
+  height: 215px;
+  padding: 20px;
+}
+
+form[name=login] input[type=email] {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 240px;
+  height: 45px;
+}
+
+form[name=login] input[type=password] {
+  position: absolute;
+  top: 85px;
+  left: 20px;
+  width: 240px;
+  height: 45px;
+}
+
+form[name=login] input[type=email]:hover,
+form[name=login] input[type=password]:hover {
+  padding: 0 14px;
+  border: 2px solid #d3d3d2;
+}
+
+form[name=login] input[type=email]:active,
+form[name=login] input[type=password]:active {
+  border: 2px solid #5b9ddf;
+}
+
+form[name=login] input[type=email]:focus,
+form[name=login] input[type=password]:focus {
+  border: 2px solid #5b9ddf;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+}
+
+form[name=login] input[type=email] + p,
+form[name=login] input[type=password] + p {
+  position: absolute;
+  top: 4px;
+  left: 30px;
+  display: none;
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: 400;
+  color: #5b9ddf;
+}
+
+form[name=login] input[type=password] + p {
+  position: absolute;
+  top: 69px;
+  left: 30px;
+}
+
+form[name=login] input[type=email]:focus + p,
+form[name=login] input[type=password]:focus + p {
+  display: block;
+}
+
+form[name=login] input[type=submit] {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 100px;
+  height: 45px;
+  border-radius: 50px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+form[name=login] div {
+  position: absolute;
+  bottom: 20px;
+  left: 140px;
+  text-align: left;
+}
+
+form[name=login] a {
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  text-decoration: underline;
+  color: #000000;
+}
+
+form[name=login] a:hover,
+form[name=login] a:active {
+  color: #e84d37;
+}
+
+.user-panel-cart-empty {
+  position: relative;
   box-sizing: border-box;
   width: 115px;
   height: 32px;
-  padding-top: 6px;
+  padding: 8px;
+  padding-left: 45px;
+  border-radius: 16px;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.user-panel-cart-empty::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 15px;
+  width: 21px;
+  height: 20px;
+  background: url("../images/spritesheet.png") no-repeat -3px -3px;
+}
+
+.user-panel-cart-full {
+  position: relative;
+  box-sizing: border-box;
+  width: 115px;
+  height: 32px;
+  padding: 8px;
+  padding-left: 45px;
+  border-radius: 16px;
+  color: #000000;
+  text-align: left;
+  background-color: #ffffff;
+}
+
+.user-panel-cart-full::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 15px;
+  width: 21px;
+  height: 20px;
+  background: url("../images/spritesheet.png") no-repeat -3px -29px;
+}
+
+.user-panel-cart-full:hover + div,
+.user-panel-cart-full:active + div,
+.user-panel-cart-full:focus + div {
+  display: block;
+}
+
+.order {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  z-index: 10;
+  display: none;
+  box-sizing: border-box;
+  width: 540px;
+  min-height: 100px;
+  padding: 20px 15px;
+  background: #f8f7f4;
+}
+
+.table {
+  width: 510px;
+  min-height: 33px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #cacac7;
+  border-collapse: collapse;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.table .row {
+  display: table-row;
+  min-height: 33px;
+  text-align: left;
+}
+
+.table .cell {
+  display: table-cell;
+  padding-bottom: 20px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.table .col-1 {
+  position: relative;
+  box-sizing: border-box;
+  width: 26px;
+}
+
+.table .col-2 {
+  box-sizing: border-box;
+  width: 33px;
+}
+
+.table .col-3 {
+  box-sizing: border-box;
+  width: 252px;
+  padding: 8px 0;
+  padding-left: 15px;
+}
+
+.order .price-per-one {
+  color: #999999;
+}
+
+.table .col-4 {
+  box-sizing: border-box;
+  width: 111px;
+  padding: 8px 0;
   text-align: center;
 }
+
+.table .col-5 {
+  box-sizing: border-box;
+  width: 87px;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.table .col-1::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 6px;
+  width: 11px;
+  height: 11px;
+  background: url("../images/spritesheet.png") no-repeat -3px -600px;
+}
+
+.order .invisible {
+  height: 90px;
+}
+
+.order .total {
+  position: absolute;
+  bottom: 85px;
+  right: 15px;
+  font-size: 15px;
+  line-height: 18px;
+  color: #333333;
+}
+
+.order .checkout {
+  position: absolute;
+  bottom: 20px;
+  right: 15px;
+  border-radius: 23px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+
+
+
+
+
+
 
 .header-inf {
   position: absolute;
@@ -156,17 +645,26 @@ main {
   line-height: 60px;
 }
 
-.add-to-cart {
+.btn {
+  position: absolute;
+  box-sizing: border-box;
+  height: 45px;
+  padding: 10px 20px;
+  border-radius: 23px;
+  font-size: 18px;
+  line-height: 24px;
   text-decoration: none;
-  background-color: #ec593c;
+  text-align: center;
+  background: #ec593c;
 }
 
-.slider .add-to-cart {
-  position: absolute;
+.slider .btn {
   bottom: 15px;
   left: 435px;
   width: 280px;
   height: 65px;
+  padding: 10px 41px;
+  border-radius: 32px;
   font-size: 32px;
   line-height: 44px;
 }
@@ -175,6 +673,31 @@ main {
   position: absolute;
   bottom: 40px;
   left: 0;
+}
+
+.slide-bar button {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ffffff;
+  border-radius: 9px;
+  background: transparent;
+}
+
+.slide-bar button:hover {
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+.slide-bar button:active {
+  background: #ffffff;
+}
+
+.slide-bar .active {
+  background: #ffffff;
+}
+
+.slide-bar .active:hover {
+  background: #ffffff;
 }
 
 .present {
@@ -204,17 +727,10 @@ main {
   background: #4b2a1b url("../images/bg-chocolate.png") no-repeat center top;
 }
 
-.present .add-to-cart {
-  position: absolute;
-  box-sizing: border-box;
+.present .btn {
   bottom: 20px;
   right: 20px;
   min-width: 165px;
-  height: 45px;
-  padding: 10px 20px;
-  font-size: 18px;
-  line-height: 24px;
-  text-align: center;
 }
 
 h2 {
@@ -260,6 +776,24 @@ p.price {
 span.price {
   font-size: 46px;
   line-height: 45px;
+}
+
+.popular-item::before {
+  content: "";
+  position: absolute;
+  top: 215px;
+  left: 95px;
+  width: 31px;
+  height: 36px;
+  background: url("../images/spritesheet.png") no-repeat -3px -436px;
+}
+
+span.kg {
+  position: absolute;
+  top: 5px;
+  left: 115px;
+  width: 41px;
+  height: 24px;
 }
 
 .popular-item-name {
@@ -320,6 +854,32 @@ h3 {
   color: black;
 }
 
+.feature-item::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 49px;
+  height: 49px;
+  background: url("../images/spritesheet.png") no-repeat;
+}
+
+.feature-item.icecream::before {
+  background-position: -3px -164px;
+}
+
+.feature-item.cow::before {
+  background-position: -3px -109px;
+}
+
+.feature-item.leaf::before {
+  background-position: -3px -219px;
+}
+
+.feature-item.termometr::before {
+  background-position: -3px -274px;
+}
+
 .blog-and-subscribe {
   margin-bottom: 40px;
 }
@@ -346,7 +906,13 @@ h3 {
   color: black;
 }
 
+.new-in-blog:hover,
+.new-in-blog:active {
+  color: #e84d37;
+}
+
 .subscribe {
+  position: relative;
   float: right;
   box-sizing: border-box;
   width: 560px;
@@ -358,13 +924,69 @@ h3 {
   background: #f8f7f4 url("../images/bg-subscribe.png") no-repeat center top;
 }
 
+.subscribe input[name=email] {
+  position: absolute;
+  bottom:  40px;
+  left:  25px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  width: 370px;
+  height: 45px;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #999999;
+}
+
+.subscribe input[name=email]:hover {
+  padding: 0 14px;
+  border: 2px solid #d3d3d2;
+}
+
+.subscribe input[name=email]:active {
+  border: 2px solid #5b9ddf;
+}
+
+.subscribe input[name=email]:focus {
+  border: 2px solid #5b9ddf;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.subscribe input[name=email] + p {
+  position: absolute;
+  bottom: 85px;
+  left: 40px;
+  display: none;
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: 400;
+  color: #5b9ddf;
+}
+
+.subscribe input[name=email]:focus + p {
+  display: block;
+}
+
+.form-subscribe input.btn {
+  bottom: 40px;
+  right: 25px;
+  width: 130px;
+  border: none;
+  font-weight: 700;
+  color: #ffffff;
+}
+
 .contact-us {
   position: relative;
   width: 1200px;
   height: 428px;
   margin-left: -27px;
   margin-bottom: 30px;
-  border-radius: 10px;
   background-color: #b0d5c4;
 }
 
@@ -377,18 +999,37 @@ h3 {
   height: 305px;
   padding: 30px 25px;
   margin-top: -150px;
+  border-radius: 10px;
   font-weight: 400;
   color: black;
   background-color: #ffffff;
 }
 
-.address-phone {
+.address,
+.phone {
   display: block;
-  margin: 5px 0;
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
 }
+
+.address {
+  margin-bottom: 15px;
+}
+
+.phone {
+  margin: 3px 0;
+}
+
+.form-feedback input.btn {
+  bottom: 30px;
+  left: 25px;
+  width: 253px;
+  border: none;
+  font-weight: 700;
+  color: #ffffff;
+}
+
 /*--------------------css for index.html ends--------------------*/
 
 /*--------------------css for catalog.html--------------------*/
@@ -406,6 +1047,11 @@ h3 {
   margin-right: 8px;
 }
 
+.breadcrumbs a:hover,
+.breadcrumbs a:active {
+  color: #ffbc9e;
+}
+
 h1 {
   margin-bottom: 15px;
   padding: 10px 0;
@@ -414,12 +1060,198 @@ h1 {
 }
 
 .filter {
-  width: auto;
+  position: relative;
+  width: 870px;
   min-height: 135px;
   margin-bottom: 40px;
   padding: 5px 0;
+}
+
+.filter > div {
+  display: inline-block;
+  min-height: 66px;
+  margin-right: 10px;
+  font-size: 16px;
+  line-height: 26px;
   font-weight: 500;
-  /*background-color: #b0d5c4;*/
+  vertical-align: top;
+}
+
+.filter p {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.filter-sorting-by {
+  position: relative;
+  width: 195px;
+}
+
+select[name=sorting-by] {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 195px;
+  height: 36px;
+  padding: 0 15px;
+  border: none;
+  border-radius: 18px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  vertical-align: middle;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+select[name=sorting-by]:hover {
+  color: #000000;
+  background: #ffffff;
+}
+
+.filter-price {
+  width: 220px;
+}
+
+.filter-background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  height: 36px;
+  padding: 5px 8px;
+  border-radius: 18px;
+  vertical-align: middle;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.filter-fatness {
+  position: relative;
+  width: 415px;
+}
+
+.filter-fatness .filter-background {
+  width: 415px;
+}
+
+.filter-fatness input {
+  margin-right: 10px;
+}
+
+.filter-fatness label {
+  margin-right: 16px;
+  vertical-align: middle;
+}
+
+.filter-fatness label:last-child {
+  margin-right: 0;
+}
+
+.filter-filler {
+  position: relative;
+  width: 700px;
+  margin-top: 15px;
+}
+
+.filter-filler .filter-background {
+  width: 700px;
+}
+
+input[type=radio],
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=radio] + label {
+  position: relative;
+  display: inline-block;
+  margin-left: 32px;
+  cursor: pointer;
+}
+
+input[type=radio] + label::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: -30px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+}
+
+input[type=radio] + label:hover::before {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ffffff;
+}
+
+input[type=radio]:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -26px;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+
+
+input[type=checkbox] + label {
+  position: relative;
+  display: inline-block;
+  margin-left: 47px;
+  cursor: pointer;
+}
+
+input[type=checkbox] + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -32px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+}
+
+input[type=checkbox] + label:hover::before {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ffffff;
+}
+
+input[type=checkbox]:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -28px;
+  width: 14px;
+  height: 10px;
+  background: url("../images/spritesheet.png") no-repeat -3px -55px;
+}
+
+.filter input[value=Применить] {
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 145px;
+  height: 36px;
+  border: 2px solid #ffffff;
+  border-radius: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.2)
+}
+
+.filter input[value=Применить]:hover {
+  color: #000000;
+  background: #ffffff;
 }
 
 .catalogue {
@@ -438,10 +1270,20 @@ h1 {
   vertical-align: top;
   box-sizing: border-box;
   width: 293px;
-  min-height: 325px;
+  height: 330px;
   margin-bottom: 35px;
   padding: 5px 13px;
   text-align: center;
+}
+
+.catalogue-item::before {
+  content: "";
+  position: absolute;
+  top: 215px;
+  left: 95px;
+  width: 31px;
+  height: 36px;
+  background: url("../images/spritesheet.png") no-repeat -3px -436px;
 }
 
 .catalogue-item-name {
@@ -453,11 +1295,83 @@ h1 {
   text-align: center;
 }
 
-.pages {
+.catalogue-item .fast-view {
+  position: absolute;
+  bottom: 15px;
+  left: 49px;
+  z-index: 10;
+  display: none;
+  box-sizing: border-box;
+  width: 195px;
+  height: 45px;
+  padding: 9px 14px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.catalogue-item:hover {
+  z-index: 10;
+  height: 405px;
+  margin-bottom: -75px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.catalogue-item:hover a {
+  text-decoration: none;
+}
+
+.catalogue-item:hover .fast-view {
+  display: block;
+}
+
+
+
+
+
+
+.paginator {
   position: absolute;
   bottom: 30px;
-  right: 0;
+  right: 13px;
+  min-width: 190px;
+  height: 26px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
 }
+
+.paginator a {
+  display: inline-block;
+  box-sizing: border-box;
+  min-width: 26px;
+  height: 26px;
+  padding: 4px 0;
+  border-radius: 13px;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.paginator a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.paginator a.disabled,
+.paginator a:disabled {
+  cursor: default;
+  opacity: 0.2;
+  background: transparent;
+}
+
+.paginator a.active {
+  cursor: default;
+  color: #000000;
+  background: #ffffff;
+}
+
+
+
+
 /*--------------------css for catalog.html ends--------------------*/
 
 /*--------------------css for footer--------------------*/
@@ -476,13 +1390,58 @@ footer {
   margin-right: 125px;
   padding: 5px;
   font-size: 0;
-  background-color: #b0d5c4;
 }
 
 .social-btn {
+  position: relative;
   display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
   vertical-align: middle;
-  /*font-size: 12px;*/
+}
+
+.social-btn:hover {
+  border: 3px solid rgba(255, 255, 255, 0.7);
+}
+
+.social-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../images/spritesheet.png") no-repeat;
+  opacity: 0.8;
+}
+
+.social-btn:hover::before {
+  opacity: 1.0;
+}
+
+.social-btn-tw::before {
+  width: 32px;
+  height: 32px;
+  background-position: -3px -524px;
+}
+
+.social-btn-ig::before {
+  width: 32px;
+  height: 32px;
+  background-position: -3px -348px;
+}
+
+.social-btn-fb::before {
+  width: 32px;
+  height: 32px;
+  background-position: -3px -71px;
+}
+
+.social-btn-vk::before {
+  width: 32px;
+  height: 32px;
+  background-position: -3px -562px;
 }
 
 .footer-about-us {
@@ -501,6 +1460,16 @@ footer {
   top: 5px;
   left: 25px;
   display: block;
+}
+
+.footer-about-us::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 5px;
+  width: 15px;
+  height: 13px;
+  background: url("../images/spritesheet.png") no-repeat -3px -329px;
 }
 
 .about-us-right {
@@ -532,4 +1501,8 @@ footer {
   display: block;
 }
 
+footer a:hover,
+footer a:active {
+  color: #ffbc9e;
+}
 /*--------------------css for footer ends--------------------*/

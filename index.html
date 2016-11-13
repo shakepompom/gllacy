@@ -4,19 +4,25 @@
     <meta charset="utf-8">
     <title>Gllasy Shop</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
-    <!-- font-family: "Roboto", "Arial", sans-serif; -->
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body>
 
+
+      <input type="radio" id="btn-1" name="toggle" checked>
+      <input type="radio" id="btn-2" name="toggle">
+      <input type="radio" id="btn-3" name="toggle">
+
+  <div class="site-wrapper">
+
     <header class="main-header">
       <div class="container">
 
 
         <div class="header-logo">
-          <a href="index.html"><img src="images/logo-gllacy.svg" alt="Gllasy Shop" width="153" height="63"></a>
+          <img src="images/logo-gllacy.svg" alt="Gllasy Shop" width="153" height="63">
         </div>
 
 
@@ -29,7 +35,7 @@
                   <a class="novelty" href="#">Новинки</a>
                 </li>
                 <li>
-                  <a href="#">Сливочное</a>
+                  <a href="catalog.html">Сливочное</a>
                 </li>
                 <li>
                   <a href="#">Щербеты</a>
@@ -53,25 +59,28 @@
 
 
         <div class="user-panel">
-
           <a class="user-panel-search" href="#"></a>
-          <form name="search" action="index.html" method="post">
-            <input type="search" name="what-to-find" value="Что ищем?" onfocus="this.value=''" onblur="this.value='Что ищем?'">
-            <p>Что ищем?</p>
-          </form>
+          <div class="modal-content-search">
+            <form action="index.html" method="get">
+              <input type="search" name="what-to-find" placeholder="Что ищем?" onfocus="this.placeholder=''" onblur="this.placeholder='Что ищем?'">
+              <p>Что ищем?</p>
+            </form>
+          </div>
 
           <a class="user-panel-login" href="#">Вход</a>
-          <form name="login" action="index.html" method="post">
-            <input type="email" name="email" placeholder="Электронная почта" onfocus="this.placeholder=''" onblur="this.placeholder='Электронная почта'">
-            <p>Электронная почта</p>
-            <input type="password" name="password" placeholder="Пароль" onfocus="this.placeholder=''" onblur="this.placeholder='Пароль'">
-            <p>Пароль</p>
-            <input class="btn" type="submit" name="login" value="Войти">
-            <div>
-              <a href="#">Забыли пароль?</a>
-              <a href="#">Новая регистрация</a>
-            </div>
-          </form>
+          <div class="modal-content-login">
+            <form action="index.html" method="post">
+              <input type="email" name="email-login" placeholder="Электронная почта" onfocus="this.placeholder=''" onblur="this.placeholder='Электронная почта'">
+              <p>Электронная почта</p>
+              <input type="password" name="password" placeholder="Пароль" onfocus="this.placeholder=''" onblur="this.placeholder='Пароль'">
+              <p>Пароль</p>
+              <input class="btn-light-bg" type="submit" name="login" value="Войти">
+              <div>
+                <a href="#">Забыли пароль?</a>
+                <a href="#">Новая регистрация</a>
+              </div>
+            </form>
+          </div>
 
           <a class="user-panel-cart-empty" href="#">Пусто</a>
         </div>
@@ -87,20 +96,30 @@
     </header>
 
 
+    <div class="slider">
+
+      <div class="slide" id="slide-1">
+        <div class="slide-title">Крем-брюле и пломбир с малиновым джемом</div>
+        <a class="btn-light-bg" href="#">Давайте оба!</a>
+      </div>
+      <div class="slide" id="slide-2">
+        <div class="slide-title">Шоколадный плобмир и лимонный сорбет</div>
+        <a class="btn-light-bg" href="#">Давайте оба!</a>
+      </div>
+      <div class="slide" id="slide-3">
+        <div class="slide-title">Пломбир с помадкой и клубничный щербет</div>
+        <a class="btn-light-bg" href="#">Давайте оба!</a>
+      </div>
+
+      <div class="slider-controls">
+        <label for="btn-1"></label>
+        <label for="btn-2"></label>
+        <label for="btn-3"></label>
+      </div>
+    </div>
+
 
     <main class="container">
-
-
-      <div class="slider">
-        <p class="slider-name">Крем-брюле и пломбир<br>
-          с малиновым джемом</p>
-        <div class="slide-bar">
-          <button class="slide-bar-1 active"></button>
-          <button class="slide-bar-2"></button>
-          <button class="slide-bar-3"></button>
-        </div>
-        <a class="btn add-to-cart" href="#">Давайте оба!</a>
-      </div>
 
 
       <section class="present clearfix">
@@ -108,14 +127,14 @@
           <h2>Малинка даром!</h2>
           <p>При покупке 2 кг любого фруктового мороженого, добавим
             в ваш заказ банку малинового варенья бесплатно.</p>
-          <a class="btn add-to-cart" href="#">Хочу варенье!</a>
+          <a class="btn-dark-bg add-to-cart" href="#">Хочу варенье!</a>
         </div>
 
         <div class="present-right">
           <h2>Шоколадки даром!</h2>
           <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку
             вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-          <a class="btn add-to-cart" href="#">Хочу шоколадки!</a>
+          <a class="btn-dark-bg add-to-cart" href="#">Хочу шоколадки!</a>
         </div>
       </section>
 
@@ -126,7 +145,7 @@
             <img src="images/catalogue-item-11.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
             <img class="hit" src="images/hit.png" alt="Хит!" width="61" height="61">
             <p class="price"><span class="price">310 </span><span class="kg">/кг</span></p>
-            <p class="popular-item-name">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+            <p class="popular-item-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
           </a>
         </div>
         <div class="popular-item">
@@ -134,7 +153,7 @@
             <img src="images/catalogue-item-12.png" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
             <img class="hit" src="images/hit.png" alt="Хит!" width="61" height="61">
             <p class="price"><span class="price">380 </span><span class="kg">/кг</span></p>
-            <p class="popular-item-name">Сливочно-кофейное с кусочками шоколада</p>
+            <p class="popular-item-title">Сливочно-кофейное с кусочками шоколада</p>
           </a>
         </div>
         <div class="popular-item">
@@ -142,7 +161,7 @@
             <img src="images/catalogue-item-13.png" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
             <img class="hit" src="images/hit.png" alt="Хит!" width="61" height="61">
             <p class="price"><span class="price">355 </span><span class="kg">/кг</span></p>
-            <p class="popular-item-name">Сливочно-клубничное с присыпкой из белого шоколада</p>
+            <p class="popular-item-title">Сливочно-клубничное с присыпкой из белого шоколада</p>
           </a>
         </div>
         <div class="popular-item">
@@ -150,7 +169,7 @@
             <img src="images/catalogue-item-14.png" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
             <img class="hit" src="images/hit.png" alt="Хит!" width="61" height="61">
             <p class="price"><span class="price">415 </span><span class="kg">/кг</span></p>
-            <p class="popular-item-name">Сливочное крем-брюле с карамельной подливкой</p>
+            <p class="popular-item-title">Сливочное крем-брюле с карамельной подливкой</p>
           </a>
         </div>
       </div>
@@ -161,23 +180,23 @@
           производства на развес</h3>
         <div class="feature-items">
           <div class="feature-item icecream">
-            <p class="feature-item-name">Все наше мороженое изготавливается на собственном производстве,
+            <p class="feature-item-description">Все наше мороженое изготавливается на собственном производстве,
               с использованием современного оборудования и проверенных временем
               технологий.</p>
           </div>
           <div class="feature-item cow">
-            <p class="feature-item-name">Закупка ингридиентов производится только у проверенных фермерских
+            <p class="feature-item-description">Закупка ингридиентов производится только у проверенных фермерских
               хозяйств и компаний, с которыми нас связывает долговременное
               сотрудничество.</p>
           </div>
           <div class="feature-item leaf">
-            <p class="feature-item-name">Для приготовления мороженого используются настоящие сливки и
+            <p class="feature-item-description">Для приготовления мороженого используются настоящие сливки и
               молоко высочайшего качества. Все дополнительные ингридиенты и
               добавки произведены из натурального, экологически чистого
               сырья.</p>
           </div>
           <div class="feature-item termometr">
-            <p class="feature-item-name">Доставка нашего мороженого до заказчиков осуществляется в
+            <p class="feature-item-description">Доставка нашего мороженого до заказчиков осуществляется в
               специальном термопаке, который не дает мороженому растаять в пути
               и позволет сохранить превосходный вкус.</p>
           </div>
@@ -196,10 +215,10 @@
           <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего
             самого вкусного, что у нас происходит. Обещаем не спамить и не слать
             всякой ненужной ерунды. Честно =)</p>
-          <form class="form-subscribe" action="index.html" method="post">
-            <input type="email" name="email" value="Электронная почта" onfocus="this.value=''" onblur="this.value='Электронная почта'">
+          <form action="index.html" method="post">
+            <input type="email" name="email-subscribe" placeholder="Электронная почта" onfocus="this.placeholder=''" onblur="this.placeholder='Электронная почта'">
             <p>Электронная почта</p>
-            <input class="btn" type="submit" value="Отправить">
+            <input class="btn-light-bg" type="submit" value="Отправить">
           </form>
         </div>
 
@@ -217,9 +236,7 @@
             <span class="phone">8 812 450-25-25</span>
             (с 10 до 20 ежедневно)
           </p>
-          <form class="form-feedback" action="index.html" method="post">
-            <input class="btn" type="submit" value="Форма обратной связи">
-          </form>
+          <a class="feedback btn-light-bg" href="#">Форма обратной связи</a>
         </div>
       </section>
     </main>
@@ -260,5 +277,21 @@
       </div>
     </footer>
 
+  </div>
+
+    <div class="modal-content-feedback">
+      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+      <h2>Мы обязательно Вам ответим!</h2>
+      <form action="index.html" method="post">
+        <input name="your-name" type="text" placeholder="Как вас зовут?" onfocus="this.placeholder=''" onblur="this.placeholder='Как вас зовут?'">
+        <p>Как вас зовут?</p>
+        <input name="email-for-answer" type="email" placeholder="Ваша почта для ответа?" onfocus="this.placeholder=''" onblur="this.placeholder='Ваша почта для ответа?'">
+        <p>Ваша почта для ответа?</p>
+        <textarea name="write-something" placeholder="Напишите что-нибудь..." onfocus="this.placeholder=''" onblur="this.placeholder='Напишите что-нибудь...'"></textarea>
+        <p>Напишите что-нибудь...</p>
+        <input class="btn-light-bg" type="submit" value="Отправить">
+      </form>
+    </div>
+    <div class="modal-overlay"></div>
 
   </body>

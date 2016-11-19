@@ -378,7 +378,7 @@ header {
   left: 8px;
   width: 17px;
   height: 17px;
-  background: url("../images/spritesheet.png") no-repeat -3px -478px;
+  background: url("../images/spritesheet.png") no-repeat -3px -402px;
 }
 
 .user-panel-search:hover {
@@ -393,7 +393,7 @@ header {
   left: 8px;
   width: 17px;
   height: 17px;
-  background: url("../images/spritesheet.png") no-repeat -3px -501px;
+  background: url("../images/spritesheet.png") no-repeat -3px -425px;
 }
 
 .modal-content-search {
@@ -478,7 +478,7 @@ input[name=what-to-find]:focus {
   left: 15px;
   width: 21px;
   height: 19px;
-  background: url("../images/spritesheet.png") no-repeat -3px -386px;
+  background: url("../images/spritesheet.png") no-repeat -3px -310px;
 }
 
 .user-panel-login:hover {
@@ -493,7 +493,7 @@ input[name=what-to-find]:focus {
   left: 15px;
   width: 21px;
   height: 19px;
-  background: url("../images/spritesheet.png") no-repeat -3px -411px;
+  background: url("../images/spritesheet.png") no-repeat -3px -335px;
 }
 
 .modal-content-login {
@@ -650,10 +650,6 @@ input[name=login] {
   background: url("../images/spritesheet.png") no-repeat -3px -29px;
 }
 
-.user-panel-cart-full:hover + .modal-content-order {
-  display: block;
-}
-
 .modal-content-order {
   position: absolute;
   top: 36px;
@@ -731,14 +727,25 @@ input[name=login] {
   text-align: center;
 }
 
-.table .col-1::before {
+.table .col-1 button{
+  display: block;
+  width: 13px;
+  height: 16px;
+  margin-top: 8px;
+  margin-left: 4px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.table .col-1 button::before {
   content: "";
   position: absolute;
   top: 11px;
   left: 6px;
   width: 11px;
   height: 11px;
-  background: url("../images/spritesheet.png") no-repeat -3px -600px;
+  background: url("../images/spritesheet.png") no-repeat -3px -448px;
 }
 
 .modal-content-order .invisible {
@@ -1014,7 +1021,7 @@ span.price {
   left: 95px;
   width: 31px;
   height: 36px;
-  background: url("../images/spritesheet.png") no-repeat -3px -436px;
+  background: url("../images/spritesheet.png") no-repeat -3px -360px;
 }
 
 span.kg {
@@ -1093,19 +1100,19 @@ h3 {
 }
 
 .feature-item.icecream::before {
-  background-position: -3px -164px;
+  background-position: -3px -126px;
 }
 
 .feature-item.cow::before {
-  background-position: -3px -109px;
+  background-position: -3px -71px;
 }
 
 .feature-item.leaf::before {
-  background-position: -3px -219px;
+  background-position: -3px -181px;
 }
 
 .feature-item.termometr::before {
-  background-position: -3px -274px;
+  background-position: -3px -236px;
 }
 
 .blog-and-subscribe {
@@ -1720,7 +1727,7 @@ input[type=checkbox]:checked + label::after {
   left: 95px;
   width: 31px;
   height: 36px;
-  background: url("../images/spritesheet.png") no-repeat -3px -436px;
+  background: url("../images/spritesheet.png") no-repeat -3px -360px;
 }
 
 .catalogue-item-name {
@@ -1923,7 +1930,7 @@ footer {
   left: 5px;
   width: 15px;
   height: 13px;
-  background: url("../images/spritesheet.png") no-repeat -3px -329px;
+  background: url("../images/spritesheet.png") no-repeat -3px -291px;
 }
 
 .about-us-right {

@@ -47,6 +47,7 @@ var login_storage = localStorage.getItem("login");
 
 
 login_link.addEventListener("click", function(event) {
+  event.preventDefault();
   login_popup.classList.add("modal-content-show");
   login_overlay.classList.add("modal-overlay-show");
 
@@ -91,6 +92,7 @@ var order_overlay = document.querySelector(".modal-overlay-transparent");
 
 
 order_link.addEventListener("click", function(event) {
+  event.preventDefault();
   order_popup.classList.add("modal-content-show");
   order_overlay.classList.add("modal-overlay-show");
 });

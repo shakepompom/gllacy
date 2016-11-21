@@ -5,6 +5,7 @@
     <title>Gllasy Shop</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
 
@@ -59,17 +60,17 @@
 
 
         <div class="user-panel">
-          <a class="user-panel-search" href="#"></a>
+          <a class="user-panel-search" href="/search"></a>
           <div class="modal-content-search">
-            <form action="index.html" method="get">
+            <form action="#" method="get">
               <input type="search" name="what-to-find" placeholder="Что ищем?" onfocus="this.placeholder=''" onblur="this.placeholder='Что ищем?'">
               <p>Что ищем?</p>
             </form>
           </div>
 
-          <a class="user-panel-login" href="#">Вход</a>
+          <a class="user-panel-login" href="/login">Вход</a>
           <div class="modal-content-login">
-            <form action="index.html" method="post">
+            <form action="#" method="post">
               <input type="email" name="email-login" placeholder="Электронная почта" onfocus="this.placeholder=''" onblur="this.placeholder='Электронная почта'">
               <p>Электронная почта</p>
               <input type="password" name="password" placeholder="Пароль" onfocus="this.placeholder=''" onblur="this.placeholder='Пароль'">
@@ -82,7 +83,7 @@
             </form>
           </div>
 
-          <a class="user-panel-cart-empty" href="#">Пусто</a>
+          <a class="user-panel-cart-empty" href="/cart">Пусто</a>
         </div>
 
 
@@ -108,7 +109,7 @@
       </div>
       <div class="slide" id="slide-3">
         <div class="slide-title">Пломбир с помадкой и клубничный щербет</div>
-        <a class="btn-light-bg" href="#">Давайте оба!</a>
+        <a class="btn-light-bg" href="/cart">Давайте оба!</a>
       </div>
 
       <div class="slider-controls">
@@ -127,14 +128,14 @@
           <h2>Малинка даром!</h2>
           <p>При покупке 2 кг любого фруктового мороженого, добавим
             в ваш заказ банку малинового варенья бесплатно.</p>
-          <a class="btn-dark-bg add-to-cart" href="#">Хочу варенье!</a>
+          <a class="btn-dark-bg" href="/cart">Хочу варенье!</a>
         </div>
 
         <div class="present-right">
           <h2>Шоколадки даром!</h2>
           <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку
             вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-          <a class="btn-dark-bg add-to-cart" href="#">Хочу шоколадки!</a>
+          <a class="btn-dark-bg" href="/cart">Хочу шоколадки!</a>
         </div>
       </section>
 
@@ -215,7 +216,7 @@
           <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего
             самого вкусного, что у нас происходит. Обещаем не спамить и не слать
             всякой ненужной ерунды. Честно =)</p>
-          <form action="index.html" method="post">
+          <form action="#" method="post">
             <input type="email" name="email-subscribe" placeholder="Электронная почта" onfocus="this.placeholder=''" onblur="this.placeholder='Электронная почта'">
             <p>Электронная почта</p>
             <input class="btn-light-bg" type="submit" value="Отправить">
@@ -226,6 +227,7 @@
 
 
       <section class="contact-us">
+        <img class="map" src="images/map.png" width="1200" height="428" alt="">
         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=7ryugN9xRd3rufRjNq4BRV2o2FfBwnQP&amp;width=1200&amp;height=428&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
         <div class="contacts">
           <p>
@@ -237,7 +239,7 @@
             <span class="phone">8 812 450-25-25</span>
             (с 10 до 20 ежедневно)
           </p>
-          <a class="feedback btn-light-bg" href="#">Форма обратной связи</a>
+          <a class="btn-light-bg feedback" href="/feedback">Форма обратной связи</a>
         </div>
       </section>
     </main>
@@ -257,21 +259,21 @@
 
         <div class="footer-about-us">
           <ul class="about-us-left">
-            <li><a class="footer-link" href="#">Для поставщиков</a></li>
-            <li><a class="footer-link" href="#">О производстве</a></li>
+            <li><a href="#">Для поставщиков</a></li>
+            <li><a href="#">О производстве</a></li>
           </ul>
           <ul class="about-us-right">
-            <li><a class="footer-link" href="#">Наши документы</a></li>
-            <li><a class="footer-link" href="#">Экологические стандарты</a></li>
+            <li><a href="#">Наши документы</a></li>
+            <li><a href="#">Экологические стандарты</a></li>
           </ul>
         </div>
 
 
         <div class="footer-copyright">
-          <a class="footer-logo" href="#">
+          <a class="footer-logo" href="https://htmlacademy.ru/" target="_blank">
             <img src="images/logo-html-academy.svg" alt="htmlacademy" width="107" height="36">
           </a>
-          Сделано в <a class="footer-link-htmlacademy" href="#">HTML Academy</a> &copy; 2016
+          Сделано в <a class="footer-link-htmlacademy" href="https://htmlacademy.ru/" target="_blank">HTML Academy</a> &copy; 2016
         </div>
 
 
@@ -280,10 +282,10 @@
 
   </div>
 
-    <div class="modal-content-feedback">
+    <div class="modal-content-feedback animated bounce">
       <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
       <h2>Мы обязательно Вам ответим!</h2>
-      <form action="index.html" method="post">
+      <form action="#" method="post">
         <input name="your-name" type="text" placeholder="Как вас зовут?" onfocus="this.placeholder=''" onblur="this.placeholder='Как вас зовут?'">
         <p>Как вас зовут?</p>
         <input name="email-for-answer" type="email" placeholder="Ваша почта для ответа?" onfocus="this.placeholder=''" onblur="this.placeholder='Ваша почта для ответа?'">
@@ -296,7 +298,9 @@
     <div class="modal-overlay"></div>
     <div class="modal-overlay-transparent"></div>
 
-    <script src="javascript/index.js"></script>
+    <script src="javascript/jquery.js"></script>
+    <!-- <script src="javascript/index.min.js"></script> -->
+    <script src="javascript/script.js"></script>
 
 
   </body>

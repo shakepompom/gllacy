@@ -128,6 +128,7 @@ img {
   display: none;
   width: 100%;
   height: 100%;
+  background: #605a5a;
   background: rgba(0, 0, 0, 0.3);
 }
 
@@ -217,8 +218,12 @@ header {
 .main-menu > li {
   position: relative;
   display: inline-block;
-  margin-left: 25px;
+  /*margin-left: 15px;*/
   padding-bottom: 5px;
+}
+
+.main-menu > li:first-child {
+  margin-left: 15px;
 }
 
 .main-menu li > a {
@@ -368,6 +373,7 @@ header {
   margin-right: 10px;
   border-radius: 16px;
   text-align: left;
+  background: #9db1a5;
   background: rgba(255, 255, 255, 0.2);
 }
 
@@ -468,6 +474,7 @@ input[name=what-to-find]:focus {
   padding-left: 45px;
   border-radius: 16px;
   text-align: left;
+  background: #9db1a5;
   background: rgba(255, 255, 255, 0.2);
 }
 
@@ -613,6 +620,7 @@ input[name=login] {
   padding-left: 45px;
   border-radius: 16px;
   text-align: left;
+  background: #9db1a5;
   background: rgba(255, 255, 255, 0.2);
 }
 
@@ -775,7 +783,7 @@ input[name=login] {
 
 .header-inf {
   position: absolute;
-  top: 65px;
+  top: 70px;
   right: -27px;
   width: 200px;
   height: 50px;
@@ -823,7 +831,7 @@ body > input[type=radio] {
 .slider {
   position: relative;
   width: 1146px;
-  min-height: 540px;
+  height: 525px;
   margin: 0 auto;
   margin-bottom: 25px;
   text-align: center;
@@ -856,7 +864,7 @@ body > input[type=radio] {
 
 .slider-controls {
   position: absolute;
-  bottom: 25px;
+  bottom: 40px;
   left: 0;
   z-index: 25;
   font-size: 0;
@@ -907,6 +915,7 @@ body > input[type=radio] {
 
 
 .slider-controls label:hover {
+  background: #b2c1b7;
   background: rgba(255, 255, 255, 0.4);
   cursor: pointer;
 }
@@ -927,7 +936,7 @@ main {
 }
 
 .present {
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .present-left {
@@ -937,7 +946,7 @@ main {
   width: 560px;
   min-height: 230px;
   margin-right: 26px;
-  padding: 20px;
+  padding: 15px 20px;
   border-radius: 10px;
   background: #7b0213 url("../images/bg-respberries.png") no-repeat center top;
 }
@@ -948,14 +957,14 @@ main {
   box-sizing: border-box;
   width: 560px;
   height: 230px;
-  padding: 20px;
+  padding: 15px 20px;
   border-radius: 10px;
   background: #4b2a1b url("../images/bg-chocolate.png") no-repeat center top;
 }
 
 .present .btn-dark-bg {
   position: absolute;
-  bottom: 20px;
+  bottom: 30px;
   right: 20px;
   min-width: 165px;
 }
@@ -992,6 +1001,10 @@ main {
   text-align: center;
 }
 
+.popular-item img {
+  margin-bottom: 5px;
+}
+
 .hit {
   position: absolute;
   top: 5px;
@@ -1002,7 +1015,7 @@ main {
 
 p.price {
   position: absolute;
-  top: 210px;
+  top: 215px;
   left: 13px;
   font-size: 30px;
   line-height: 45px;
@@ -1017,7 +1030,7 @@ span.price {
 .popular-item::before {
   content: "";
   position: absolute;
-  top: 215px;
+  top: 220px;
   left: 95px;
   width: 31px;
   height: 36px;
@@ -1200,7 +1213,8 @@ h3 {
   color: #5b9ddf;
 }
 
-.subscribe input[name=email-subscribe]:focus + p {
+.subscribe input[name=email-subscribe]:focus + p,
+.subscribe input[name=email-subscribe]:valid + p {
   display: block;
 }
 
@@ -1219,7 +1233,11 @@ h3 {
   width: 1200px;
   height: 428px;
   margin-left: -27px;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
+}
+
+.map {
+  position: absolute;
 }
 
 .contacts {
@@ -1278,16 +1296,8 @@ h3 {
   background: #f8f7f4;
 }
 
-@keyframes bounce {
-  0%   { transform: translateY(-2000px); }
-  30%  { transform: translateY(-100px);   }
-  80%  { transform: translateY(50px);    }
-  100% { transform: translateY(0);       }
-}
-
 .modal-content-show {
   display: block;
-  animation: bounce 0.3s;
 }
 
 .modal-overlay-show {
@@ -1447,8 +1457,7 @@ textarea[name=write-something]:focus + p {
 }
 
 h1 {
-  margin-bottom: 15px;
-  padding: 10px 0;
+  margin-bottom: 25px;
   font-size: 35px;
   line-height: 41px;
 }
@@ -1457,14 +1466,14 @@ h1 {
   position: relative;
   width: 860px;
   min-height: 135px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   padding: 5px 0;
   font-size: 0;
 }
 
 .filter > div {
   display: inline-block;
-  height: 66px;
+  height: 60px;
   font-size: 16px;
   line-height: 26px;
   font-weight: 500;
@@ -1499,6 +1508,7 @@ select[name=sorting-by] {
   font-weight: 500;
   color: #ffffff;
   vertical-align: middle;
+  background: #a9bab0;
   background: rgba(255, 255, 255, 0.2);
 }
 
@@ -1516,6 +1526,7 @@ select[name=sorting-by]:hover {
   padding: 5px 8px;
   border-radius: 18px;
   vertical-align: middle;
+  background: #a9bab0;
   background: rgba(255, 255, 255, 0.2);
 }
 
@@ -1533,6 +1544,7 @@ select[name=sorting-by]:hover {
 .filter-background .scale {
   height: 4px;
   margin-top: 16px;
+  background: #d1dad3;
   background: rgba(248, 247, 244, 0.5);
 }
 
@@ -1683,6 +1695,7 @@ input[type=checkbox]:checked + label::after {
   line-height: 18px;
   font-weight: 500;
   color: #ffffff;
+  background: #a6b7ae;
   background: rgba(255, 255, 255, 0.2)
 }
 
@@ -1703,8 +1716,8 @@ input[type=checkbox]:checked + label::after {
   width: 1172px;
   margin: 0 auto;
   margin-left: -13px;
-  margin-bottom: 35px;
-  padding-bottom: 140px;
+  margin-bottom: 25px;
+  padding-bottom: 100px;
   font-size: 0;
 }
 
@@ -1723,14 +1736,14 @@ input[type=checkbox]:checked + label::after {
 .catalogue-item::before {
   content: "";
   position: absolute;
-  top: 215px;
+  top: 220px;
   left: 95px;
   width: 31px;
   height: 36px;
   background: url("../images/spritesheet.png") no-repeat -3px -360px;
 }
 
-.catalogue-item-name {
+.catalogue-item-title {
   margin: 0;
   padding: 0;
   font-size: 16px;
@@ -1741,7 +1754,7 @@ input[type=checkbox]:checked + label::after {
 
 .catalogue-item .fast-view {
   position: absolute;
-  bottom: 15px;
+  bottom: 25px;
   left: 49px;
   z-index: 10;
   display: none;
@@ -1759,6 +1772,7 @@ input[type=checkbox]:checked + label::after {
   z-index: 10;
   height: 405px;
   margin-bottom: -75px;
+  background: #afbeb4;
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
@@ -1774,7 +1788,7 @@ input[type=checkbox]:checked + label::after {
 .paginator {
   position: absolute;
   bottom: 30px;
-  right: 13px;
+  right: 5px;
   min-width: 190px;
   height: 26px;
   font-size: 16px;
@@ -1795,6 +1809,7 @@ input[type=checkbox]:checked + label::after {
 }
 
 .paginator a:hover {
+  background: #9db1a5;
   background: rgba(255, 255, 255, 0.2);
 }
 
@@ -1831,6 +1846,7 @@ main.container::before {
   left: 0;
   width: 100%;
   height: 1px;
+  background: #a9bbb1;
   background: rgba(255, 255, 255, 0.3);
 }
 
@@ -1888,22 +1904,14 @@ footer {
 
 .social-btn:hover {
   border: 3px solid rgba(255, 255, 255, 0.7);
-}
-
-.social-btn-tw:hover,
-.social-btn-ig:hover,
-.social-btn-fb:hover,
-.social-btn-vk:hover {
   opacity: 1.0;
 }
 
-.social-btn-tw:active,
-.social-btn-ig:active,
-.social-btn-fb:active,
-.social-btn-vk:active {
+.social-btn:active {
   box-shadow: inset 0 2px 1px 0 rgba(136, 136, 136, 1.0);
   opacity: 0.7;
 }
+
 
 .footer-about-us {
   position: relative;
@@ -1954,6 +1962,7 @@ footer {
   width: 195px;
   min-height: 50px;
   margin-top: -10px;
+  margin-right: -10px;
   font-size: 12px;
   line-height: 18px;
 }
@@ -1962,6 +1971,7 @@ footer {
   display: block;
   width: 107px;
   height: 36px;
+  margin-bottom: 5px;
 }
 
 footer a:hover,

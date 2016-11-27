@@ -1,90 +1,3 @@
-// popup-search
-var search_link = document.querySelector(".user-panel-search");
-var search_popup = document.querySelector(".modal-content-search");
-var search_form = search_popup.querySelector("form");
-var search_search = search_popup.querySelector("[name=what-to-find]");
-var search_overlay = document.querySelector(".modal-overlay-transparent");
-
-
-search_link.addEventListener("click", function(event) {
-  event.preventDefault();
-  search_popup.classList.add("modal-content-show");
-  search_overlay.classList.add("modal-overlay-show");
-  search_search.focus();
-});
-
-window.addEventListener("keydown", function(event) {
-  if (event.keyCode === 27) {
-    if (search_popup.classList.contains("modal-content-show")) {
-      search_popup.classList.remove("modal-content-show");
-      search_overlay.classList.remove("modal-overlay-show");
-    }
-  }
-});
-
-search_overlay.addEventListener("click", function(event) {
-  search_popup.classList.remove("modal-content-show");
-  search_overlay.classList.remove("modal-overlay-show");
-});
-
-search_form.addEventListener("submit", function(event) {
-  if (!search_search.value) {
-    event.preventDefault();
-    alert("Введите текст для поиска");
-  }
-});
-
-
-
-// popup-login
-var login_link = document.querySelector(".user-panel-login");
-var login_popup = document.querySelector(".modal-content-login");
-var login_overlay = document.querySelector(".modal-overlay-transparent");
-var login_form = login_popup.querySelector("form");
-var login_login = login_popup.querySelector("[name=email-login]");
-var login_password = login_popup.querySelector("[name=password]");
-var login_storage = localStorage.getItem("login");
-
-
-login_link.addEventListener("click", function(event) {
-  event.preventDefault();
-  login_popup.classList.add("modal-content-show");
-  login_overlay.classList.add("modal-overlay-show");
-
-  if (login_storage) {
-    login_login.value = login_storage;
-    login_password.focus();
-  } else {
-    login_login.focus();
-  }
-});
-
-window.addEventListener("keydown", function(event) {
-  if (event.keyCode === 27) {
-    if (login_popup.classList.contains("modal-content-show")
-    || login_overlay.classList.contains("modal-overlay-show")) {
-      login_popup.classList.remove("modal-content-show");
-      login_overlay.classList.remove("modal-overlay-show");
-    }
-  }
-});
-
-login_overlay.addEventListener("click", function(event) {
-  login_popup.classList.remove("modal-content-show");
-  login_overlay.classList.remove("modal-overlay-show");
-});
-
-login_form.addEventListener("submit", function(event) {
-  if (!login_login.value || !login_password.value) {
-    event.preventDefault();
-    alert("Введите логин и пароль");
-  } else {
-    localStorage.setItem("login", login.value);
-  }
-});
-
-
-
 // popup-feedback
 var feedback_link = document.querySelector(".feedback");
 var feedback_popup = document.querySelector(".modal-content-feedback");
@@ -92,8 +5,12 @@ var feedback_overlay = document.querySelector(".modal-overlay");
 var feedback_close = feedback_popup.querySelector(".modal-content-close");
 var feedback_form = feedback_popup.querySelector("form");
 var feedback_name = feedback_popup.querySelector("[name=your-name]");
+var feedback_name_label = feedback_popup.querySelector("[name=your-name] + label");
 var feedback_email = feedback_popup.querySelector("[name=email-for-answer]");
+var feedback_email_label = feedback_popup.querySelector("[name=email-for-answer] + label");
 var feedback_feedback = feedback_popup.querySelector("[name=write-something]");
+var feedback_feedback_label = feedback_popup.querySelector("[name=write-something] + label");
+
 
 
 feedback_link.addEventListener("click", function(event) {
@@ -128,5 +45,81 @@ window.addEventListener("keydown", function(event) {
 feedback_form.addEventListener("submit", function(event) {
   if (!feedback_name.value || !feedback_email.value || !feedback_feedback.value) {
     alert("Заполните форму");
+  }
+});
+
+feedback_name.addEventListener("focus", function(event) {
+  if (feedback_name_label.classList.contains("label-blur")) {
+    feedback_name_label.classList.remove("label-blur");
+    feedback_name_label.classList.add("label-focus");
+  } else {
+    feedback_name_label.classList.add("label-focus");
+  }
+});
+
+feedback_name.addEventListener("blur", function(event) {
+  if (!feedback_name.value) {
+    feedback_name_label.classList.remove("label-focus");
+  } else {
+    feedback_name_label.classList.add("label-blur");
+  }
+});
+
+feedback_email.addEventListener("focus", function(event) {
+  if (feedback_email_label.classList.contains("label-blur")) {
+    feedback_email_label.classList.remove("label-blur");
+    feedback_email_label.classList.add("label-focus");
+  } else {
+    feedback_email_label.classList.add("label-focus");
+  }
+});
+
+feedback_email.addEventListener("blur", function(event) {
+  if (!feedback_email.value) {
+    feedback_email_label.classList.remove("label-focus");
+  } else {
+    feedback_email_label.classList.add("label-blur");
+  }
+});
+
+feedback_feedback.addEventListener("focus", function(event) {
+  if (feedback_feedback_label.classList.contains("label-blur")) {
+    feedback_feedback_label.classList.remove("label-blur");
+    feedback_feedback_label.classList.add("label-focus");
+  } else {
+    feedback_feedback_label.classList.add("label-focus");
+  }
+});
+
+feedback_feedback.addEventListener("blur", function(event) {
+  if (!feedback_feedback.value) {
+    feedback_feedback_label.classList.remove("label-focus");
+  } else {
+    feedback_feedback_label.classList.add("label-blur");
+  }
+});
+
+
+
+// email-subscribe
+var email_subscribe_input = document.querySelector("[name=email-subscribe]");
+var email_subscribe_label = document.querySelector("[name=email-subscribe] + label");
+
+
+
+email_subscribe_input.addEventListener("focus", function(event) {
+  if (email_subscribe_label.classList.contains("label-blur")) {
+    email_subscribe_label.classList.remove("label-blur");
+    email_subscribe_label.classList.add("label-focus");
+  } else {
+    email_subscribe_label.classList.add("label-focus");
+  }
+});
+
+email_subscribe_input.addEventListener("blur", function(event) {
+  if (!email_subscribe_input.value) {
+    email_subscribe_label.classList.remove("label-focus");
+  } else {
+    email_subscribe_label.classList.add("label-blur");
   }
 });

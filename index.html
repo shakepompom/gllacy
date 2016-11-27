@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
 
   <body>
@@ -63,19 +63,25 @@
           <a class="user-panel-search" href="/search"></a>
           <div class="modal-content-search">
             <form action="#" method="get">
-              <input type="search" name="what-to-find" placeholder="Что ищем?" onfocus="this.placeholder=''" onblur="this.placeholder='Что ищем?'">
-              <p>Что ищем?</p>
+              <fieldset>
+                <input type="search" name="what-to-find" placeholder="Что ищем?">
+                <label>Что ищем?</label>
+              </fieldset>
             </form>
           </div>
 
           <a class="user-panel-login" href="/login">Вход</a>
           <div class="modal-content-login">
             <form action="#" method="post">
-              <input type="email" name="email-login" placeholder="Электронная почта" onfocus="this.placeholder=''" onblur="this.placeholder='Электронная почта'">
-              <p>Электронная почта</p>
-              <input type="password" name="password" placeholder="Пароль" onfocus="this.placeholder=''" onblur="this.placeholder='Пароль'">
-              <p>Пароль</p>
-              <input class="btn-light-bg" type="submit" name="login" value="Войти">
+              <fieldset>
+                <input type="email" name="email-login" placeholder="Электронная почта">
+                <label>Электронная почта</label>
+              </fieldset>
+              <fieldset>
+                <input type="password" name="password" placeholder="Пароль">
+                <label>Пароль</label>
+              </fieldset>
+              <input class="btn-light-bg" type="submit" name="login-submit" value="Войти">
               <div>
                 <a href="#">Забыли пароль?</a>
                 <a href="#">Новая регистрация</a>
@@ -217,8 +223,10 @@
             самого вкусного, что у нас происходит. Обещаем не спамить и не слать
             всякой ненужной ерунды. Честно =)</p>
           <form action="#" method="post">
-            <input type="email" name="email-subscribe" placeholder="Электронная почта" onfocus="this.placeholder=''" onblur="this.placeholder='Электронная почта'">
-            <p>Электронная почта</p>
+            <fieldset>
+              <input type="email" name="email-subscribe" placeholder="Электронная почта">
+              <label>Электронная почта</label>
+            </fieldset>
             <input class="btn-light-bg" type="submit" value="Отправить">
           </form>
         </div>
@@ -286,12 +294,18 @@
       <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
       <h2>Мы обязательно Вам ответим!</h2>
       <form action="#" method="post">
-        <input name="your-name" type="text" placeholder="Как вас зовут?" onfocus="this.placeholder=''" onblur="this.placeholder='Как вас зовут?'">
-        <p>Как вас зовут?</p>
-        <input name="email-for-answer" type="email" placeholder="Ваша почта для ответа?" onfocus="this.placeholder=''" onblur="this.placeholder='Ваша почта для ответа?'">
-        <p>Ваша почта для ответа?</p>
-        <textarea name="write-something" placeholder="Напишите что-нибудь..." onfocus="this.placeholder=''" onblur="this.placeholder='Напишите что-нибудь...'"></textarea>
-        <p>Напишите что-нибудь...</p>
+        <fieldset>
+          <input name="your-name" type="text" placeholder="Как вас зовут?">
+          <label>Как вас зовут?</label>
+        </fieldset>
+        <fieldset>
+          <input name="email-for-answer" type="email" placeholder="Ваша почта для ответа?">
+          <label>Ваша почта для ответа?</label>
+        </fieldset>
+        <fieldset>
+          <textarea name="write-something" placeholder="Напишите что-нибудь..."></textarea>
+          <label>Напишите что-нибудь...</label>
+        </fieldset>
         <input class="btn-light-bg" type="submit" value="Отправить">
       </form>
     </div>
@@ -299,8 +313,8 @@
     <div class="modal-overlay-transparent"></div>
 
     <script src="javascript/jquery.js"></script>
-    <!-- <script src="javascript/index.min.js"></script> -->
-    <script src="javascript/script.js"></script>
+    <script src="javascript/scripts.min.js"></script>
+    <script src="javascript/index.min.js"></script>
 
 
   </body>

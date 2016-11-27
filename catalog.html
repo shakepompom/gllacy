@@ -55,19 +55,25 @@
           <a class="user-panel-search" href="/search"></a>
           <div class="modal-content-search">
             <form action="#" method="get">
-              <input type="search" name="what-to-find" placeholder="Что ищем?" onfocus="this.placeholder=''" onblur="this.placeholder='Что ищем?'">
-              <p>Что ищем?</p>
+              <fieldset>
+                <input type="search" name="what-to-find" placeholder="Что ищем?">
+                <label>Что ищем?</label>
+              </fieldset>
             </form>
           </div>
 
           <a class="user-panel-login" href="/login">Вход</a>
           <div class="modal-content-login">
             <form action="#" method="post">
-              <input type="email" name="email-login" placeholder="Электронная почта" onfocus="this.placeholder=''" onblur="this.placeholder='Электронная почта'">
-              <p>Электронная почта</p>
-              <input type="password" name="password" placeholder="Пароль" onfocus="this.placeholder=''" onblur="this.placeholder='Пароль'">
-              <p>Пароль</p>
-              <input class="btn-light-bg" type="submit" name="login" value="Войти">
+              <fieldset>
+                <input type="email" name="email-login" placeholder="Электронная почта">
+                <label>Электронная почта</label>
+              </fieldset>
+              <fieldset>
+                <input type="password" name="password" placeholder="Пароль">
+                <label>Пароль</label>
+              </fieldset>
+              <input class="btn-light-bg" type="submit" name="login-submit" value="Войти">
               <div>
                 <a href="#">Забыли пароль?</a>
                 <a href="#">Новая регистрация</a>
@@ -354,8 +360,8 @@
 
     <div class="modal-overlay-transparent"></div>
 
+    <script src="javascript/scripts.min.js"></script>
     <script src="javascript/catalog.min.js"></script>
-    <!-- <script src="javascript/script.js"></script> -->
 
 
   </body>

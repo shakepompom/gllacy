@@ -143,6 +143,52 @@ img {
   background: transparent;
 }
 
+input[type=submit],
+input[type=submit]:hover,
+input[type=submit]:active,
+input[type=submit]:focus {
+  border: none;
+}
+
+fieldset {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  border: none;
+}
+
+input,
+textarea {
+  box-sizing: border-box;
+  padding: 0 15px;
+  border: 1px solid #d3d3d2;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: #000000;
+}
+
+input:hover,
+textarea:hover {
+  padding: 0 14px;
+  border: 2px solid #d3d3d2;
+}
+
+input:active,
+textarea:active {
+  padding: 0 14px;
+  border: 2px solid #5b9ddf;
+}
+
+input:focus,
+textarea:focus {
+  padding: 0 14px;
+  border: 2px solid #5b9ddf;
+}
+
 input::-webkit-input-placeholder {
   font-weight: 400;
   color: #999999;
@@ -159,8 +205,8 @@ input:-moz-placeholder {
   }
 
 input:-ms-input-placeholder {
-  font-weight: 400;
-  color: #999999;
+  font-weight: 400!important;
+  color: #999999!important;
 }
 
 textarea::-webkit-input-placeholder {
@@ -179,7 +225,33 @@ textarea:-moz-placeholder {
   }
 
 textarea:-ms-input-placeholder {
+  font-weight: 400!important;
+  color: #999999!important;
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+input + label,
+textarea + label {
+  position: absolute;
+  top: 6px;
+  left: 15px;
+  display: none;
+  font-size: 11px;
+  line-height: 13px;
   font-weight: 400;
+}
+
+.label-focus {
+  display: block;
+  color: #5b9ddf;
+}
+
+.label-blur {
+  display: block;
   color: #999999;
 }
 
@@ -195,14 +267,10 @@ header {
   padding-top: 10px;
 }
 
-
-
 .header-logo {
   float: left;
   margin-left: -5px;
 }
-
-
 
 .main-menu {
 	float: left;
@@ -218,7 +286,6 @@ header {
 .main-menu > li {
   position: relative;
   display: inline-block;
-  /*margin-left: 15px;*/
   padding-bottom: 5px;
 }
 
@@ -316,6 +383,7 @@ header {
 }
 
 .main-menu .sub-menu a:active {
+  border-radius: 0;
   background: #f6b5a5;
 }
 
@@ -342,8 +410,6 @@ header {
   color: #000000;
   background: #d07058;
 }
-
-
 
 .user-panel {
   position: relative;
@@ -411,58 +477,16 @@ header {
   box-sizing: border-box;
   width: 340px;
   height: 84px;
-  padding: 20px 15px;
+  padding: 0 15px;
   border-radius: 5px;
   background: #f8f7f4;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
-.user-panel input {
-  box-sizing: border-box;
-  padding: 0 15px;
-  border: 1px solid #d3d3d2;
-  border-radius: 5px;
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 700;
-  font-family: "Roboto", "Arial", sans-serif;
-  color: #000000;
-}
-
 input[name=what-to-find] {
-  position: relative;
   width: 310px;
   height: 45px;
 }
-
-input[name=what-to-find]:hover {
-  padding: 0 14px;
-  border: 2px solid #d3d3d2;
-}
-
-input[name=what-to-find]:active {
-  border: 2px solid #5b9ddf;
-}
-
-input[name=what-to-find]:focus {
-  border: 2px solid #5b9ddf;
-}
-
-.user-panel input + p {
-  position: absolute;
-  top: 4px;
-  left: 30px;
-  display: none;
-  font-size: 11px;
-  line-height: 13px;
-  font-weight: 400;
-  color: #5b9ddf;
-}
-
-.user-panel input:focus + p {
-  display: block;
-}
-
 
 .user-panel-login {
   position: relative;
@@ -512,7 +536,7 @@ input[name=what-to-find]:focus {
   box-sizing: border-box;
   width: 280px;
   height: 215px;
-  padding: 20px;
+  padding: 0 20px;
   border-radius: 5px;
   background: #f8f7f4;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
@@ -522,62 +546,9 @@ input[name=email-login],
 input[name=password] {
   width: 240px;
   height: 45px;
-  font-size: 14px;
-  line-height: 24px;
-  font-family: "Roboto", "Arial", sans-serif;
-  color: #000000;
 }
 
-input[name=email-login] {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}
-
-input[name=password] {
-  position: absolute;
-  top: 85px;
-  left: 20px;
-}
-
-input[name=email-login]:hover,
-input[name=password]:hover {
-  padding: 0 14px;
-  border: 2px solid #d3d3d2;
-}
-
-input[name=email-login]:active,
-input[name=password]:active {
-  border: 2px solid #5b9ddf;
-}
-
-input[name=email-login]:focus,
-input[name=password]:focus {
-  border: 2px solid #5b9ddf;
-}
-
-input[name=email-login] + p,
-input[name=password] + p {
-  position: absolute;
-  top: 4px;
-  left: 30px;
-  display: none;
-  font-size: 11px;
-  line-height: 13px;
-  font-weight: 400;
-  color: #5b9ddf;
-}
-
-input[name=password] + p {
-  top: 69px;
-}
-
-input[name=email-login]:focus + p,
-input[name=password]:focus + p {
-  display: block;
-}
-
-input[name=login] {
+input[name=login-submit] {
   position: absolute;
   bottom: 20px;
   left: 20px;
@@ -610,7 +581,6 @@ input[name=login] {
   color: #e84d37;
 }
 
-
 .user-panel-cart-empty {
   position: relative;
   box-sizing: border-box;
@@ -633,7 +603,6 @@ input[name=login] {
   height: 20px;
   background: url("../images/spritesheet.png") no-repeat -3px -3px;
 }
-
 
 .user-panel-cart-full {
   position: relative;
@@ -773,13 +742,16 @@ input[name=login] {
   position: absolute;
   bottom: 20px;
   right: 15px;
+  width: 170px;
+  height: 44px;
+  padding: 10px 0;
   border: none;
   border-radius: 22px;
   font-size: 18px;
   font-weight: 700;
   color: #ffffff;
+  text-align: center;
 }
-
 
 .header-inf {
   position: absolute;
@@ -801,8 +773,6 @@ input[name=login] {
   font-size: 22px;
   line-height: 24px;
 }
-
-
 
 /*--------------------slider--------------------*/
 
@@ -913,7 +883,6 @@ body > input[type=radio] {
   background-color: #ffffff;
 }
 
-
 .slider-controls label:hover {
   background: #b2c1b7;
   background: rgba(255, 255, 255, 0.4);
@@ -924,11 +893,7 @@ body > input[type=radio] {
   background: #ffffff;
 }
 
-
-
 /*--------------------index.html--------------------*/
-
-
 
 main {
   width: 1146px;
@@ -1172,50 +1137,15 @@ h3 {
   background: #f8f7f4 url("../images/bg-subscribe.png") no-repeat center top;
 }
 
-.subscribe input[name=email-subscribe] {
+.subscribe fieldset {
   position: absolute;
   bottom:  40px;
   left:  25px;
-  padding: 10px 15px;
-  box-sizing: border-box;
+}
+
+.subscribe input[name=email-subscribe] {
   width: 370px;
   height: 45px;
-  border: 1px solid #d3d3d2;
-  border-radius: 5px;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 700;
-  font-family: "Roboto", "Arial", sans-serif;
-  color: #000000;
-}
-
-.subscribe input[name=email-subscribe]:hover {
-  padding: 0 14px;
-  border: 2px solid #d3d3d2;
-}
-
-.subscribe input[name=email-subscribe]:active {
-  border: 2px solid #5b9ddf;
-}
-
-.subscribe input[name=email-subscribe]:focus {
-  border: 2px solid #5b9ddf;
-}
-
-.subscribe input[name=email-subscribe] + p {
-  position: absolute;
-  bottom: 85px;
-  left: 40px;
-  display: none;
-  font-size: 11px;
-  line-height: 13px;
-  font-weight: 400;
-  color: #5b9ddf;
-}
-
-.subscribe input[name=email-subscribe]:focus + p,
-.subscribe input[name=email-subscribe]:valid + p {
-  display: block;
 }
 
 .subscribe .btn-light-bg {
@@ -1225,8 +1155,6 @@ h3 {
   width: 130px;
   font-weight: 700;
 }
-
-
 
 .contact-us {
   position: relative;
@@ -1336,7 +1264,6 @@ h3 {
 }
 
 .modal-content-feedback h2 {
-  margin-bottom: 20px;
   font-size: 24px;
   line-height: 28px;
   font-weight: 500;
@@ -1345,82 +1272,27 @@ h3 {
 
 input[name=your-name],
 input[name=email-for-answer] {
-  box-sizing: border-box;
   width: 267px;
   height: 44px;
-  margin-bottom: 20px;
-  padding: 0 15px;
-  border: 1px solid #d3d3d2;
-  border-radius: 4px;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 700;
-  font-family: "Roboto", "Arial", sans-serif;
-  color: #000000;
 }
 
 textarea[name=write-something] {
-  box-sizing: border-box;
   width: 428px;
   height: 155px;
   resize: none;
   padding: 12px 15px;
-  border: 1px solid #d3d3d2;
-  border-radius: 4px;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 700;
-  font-family: "Roboto", "Arial", sans-serif;
-  color: #000000;
 }
 
-input[name=your-name]:hover,
-input[name=email-for-answer]:hover,
 textarea[name=write-something]:hover {
   padding: 11px 14px;
-  border: 2px solid #d3d3d2;
 }
 
-input[name=your-name]:active,
-input[name=email-for-answer]:active,
 textarea[name=write-something]:active {
-  border: 2px solid #5b9ddf;
+  padding: 11px 14px;
 }
 
-input[name=your-name]:focus,
-input[name=email-for-answer]:focus,
 textarea[name=write-something]:focus {
-  border: 2px solid #5b9ddf;
-}
-
-input[name=your-name] + p,
-input[name=email-for-answer] + p,
-textarea[name=write-something] + p {
-  position: absolute;
-  left: 30px;
-  display: none;
-  font-size: 11px;
-  line-height: 13px;
-  font-weight: 400;
-  color: #5b9ddf;
-}
-
-input[name=your-name] + p {
-  top: 54px;
-}
-
-input[name=email-for-answer] + p {
-  top: 118px;
-}
-
-textarea[name=write-something] + p {
-  top: 182px;
-}
-
-input[name=your-name]:focus + p,
-input[name=email-for-answer]:focus + p,
-textarea[name=write-something]:focus + p {
-  display: block;
+  padding: 11px 14px;
 }
 
 .modal-content-feedback .btn-light-bg {
@@ -1430,12 +1302,7 @@ textarea[name=write-something]:focus + p {
   width: 140px;
 }
 
-
-
 /*--------------------catalog.html--------------------*/
-
-
-
 
 .breadcrumbs {
   min-height: 15px;
@@ -1613,8 +1480,13 @@ select[name=sorting-by]:hover {
 
 input[type=radio] + label {
   position: relative;
+  top: 0;
+  left: 0;
   display: inline-block;
   margin-left: 32px;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 500;
   cursor: pointer;
 }
 
@@ -1646,11 +1518,15 @@ input[type=radio]:checked + label::after {
   background: #ffffff;
 }
 
-
 input[type=checkbox] + label {
   position: relative;
+  top: 0;
+  left: 0;
   display: inline-block;
   margin-left: 47px;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 500;
   cursor: pointer;
 }
 
@@ -1850,11 +1726,7 @@ main.container::before {
   background: rgba(255, 255, 255, 0.3);
 }
 
-
-
 /*--------------------footer--------------------*/
-
-
 
 footer {
   width: 1146px;
@@ -1911,7 +1783,6 @@ footer {
   box-shadow: inset 0 2px 1px 0 rgba(136, 136, 136, 1.0);
   opacity: 0.7;
 }
-
 
 .footer-about-us {
   position: relative;

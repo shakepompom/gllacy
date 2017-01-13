@@ -314,24 +314,6 @@ header {
   text-decoration: none;
 }
 
-.main-menu li > a::before {
-  content: "";
-  position: absolute;
-  bottom: 12px;
-  left: 13px;
-  right: 13px;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.main-menu li.active > a:hover::before {
-  display: none;
-}
-
-.main-menu li.active > a::before {
-  display: none;
-}
-
 .main-menu li:hover > a {
   text-decoration: none;
   color: #000000;
@@ -482,7 +464,7 @@ header {
   background: #f8f7f4;
 }
 
-.user-panel-search:hover::before {
+.user-panel-search:hover::after {
   content: "";
   position: absolute;
   top: 7px;

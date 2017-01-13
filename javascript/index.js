@@ -126,53 +126,25 @@ email_subscribe_input.addEventListener("blur", function(event) {
 
 
 
-// map-pin
+// map
+ymaps.ready(init);
+var myMap,
+    myPlacemark;
 
-// function initMap() {
-//   var map = new google.maps.Map(document.querySelector(".map"), {
-//     zoom: 15,
-//     center: {lat: 59.9387942, lng: 30.3224866},
-//   });
-//
-// var image = "../images/pin.png";
-// var gllasyMarker = new google.maps.Marker({
-//   position: {lat: 59.9387942, lng: 30.3224866},
-//   map: map,
-//   icon: image,
-// });
-// }
+function init(){
+    myMap = new ymaps.Map("map", {
+        center: [59.939334, 30.329320],
+        zoom: 16
+    });
 
-// var map;
-// function initMap() {
-//   map = new google.maps.Map(document.querySelector(".google-map"), {
-//     zoom: 16,
-//     center: new google.maps.LatLng(59.9387942, 30.3224866),
-//     type: "roadmap",
-//   });
-//
-//   var icon = "../images/pin.png";
-//
-//   var iconBase = "https://maps.google.com/mapfiles/kml/shapes/";
-//   var iconGllasy = "../images/pin.png";
-//   var icons = {
-//     gllasy: {
-//       icon: iconGllasy;
-//     },
-//   }
-//
-//   function addMarker(feature) {
-//     var marker = new google.maps.Marker({
-//       position: feature.position,
-//       icon: icon[feature.type].icon,
-//       map: map,
-//     });
-//   }
-//
-//   var feature = [
-//     {
-//       position: new google.maps.LatLng(59.9387942, 30.3224866),
-//       type: gllasy,
-//     }
-//   ];
-//
-// }
+    myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {
+        hintContent: "Gllacy Shop"
+    }, {
+        iconLayout: "default#image",
+        iconImageHref: "images/pin.png",
+        iconImageSize: [218, 142],
+        iconImageOffset: [-40, -142]
+    });
+
+    myMap.geoObjects.add(myPlacemark);
+}

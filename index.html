@@ -7,6 +7,7 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU" type="text/javascript"></script>
   </head>
 <!-- <script src="http://pixp.fdrv.guru/pixp.js" type="text/javascript"></script> -->
   <body>
@@ -14,7 +15,6 @@
     <input class="slide-checked" type="radio" id="btn-2" name="toggle">
     <input class="slide-checked" type="radio" id="btn-3" name="toggle">
   <div class="site-wrapper">
-
     <header class="main-header">
       <div class="container">
         <div class="header-logo">
@@ -86,7 +86,6 @@
         </div>
       </div>
     </header>
-
     <main class="container">
       <div class="slider">
         <div class="slide" id="slide-1">
@@ -193,11 +192,8 @@
         </div>
       </div>
       <div class="contact-us">
-        <!-- <img class="map" src="images/map-google.png" width="1200" height="428" alt=""> -->
-        <!-- <div class="map"> -->
-          <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6722.6158352154525!2d30.331387589180455!3d59.93802195078364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1481230795066" width="1200" height="428" frameborder="0" style="border:0" allowfullscreen></iframe> -->
-        <!-- </div> -->
-        <div id="map"></div>
+        <img class="map" src="images/map.png" width="1200" height="428" alt="">
+        <div id="map" style="width: 1200px; height: 430px"></div>
         <div class="contacts">
           <p>
             Адрес главного офиса и<br>
@@ -212,7 +208,6 @@
         </div>
       </div>
     </main>
-
     <footer class="main-footer">
       <div class="container">
         <div class="footer-social">
@@ -239,7 +234,6 @@
         </div>
       </div>
     </footer>
-
   </div>
 
     <div class="modal-content-feedback animated bounce">
@@ -261,15 +255,11 @@
         <input class="btn-light-bg" type="submit" value="Отправить">
       </form>
     </div>
-
     <div class="modal-overlay"></div>
     <div class="modal-overlay-transparent"></div>
 
-    <!-- <script src="javascript/slider.js"></script> -->
+    <script src="javascript/slider.js"></script>
     <script src="javascript/scripts.min.js"></script>
     <script src="javascript/index.js"></script>
-    <script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU"></script>
-    <script src="javascript/map.js"></script>
-
 
   </body>

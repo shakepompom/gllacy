@@ -11,8 +11,6 @@ var feedback_email_label = feedback_popup.querySelector("[name=email-for-answer]
 var feedback_feedback = feedback_popup.querySelector("[name=write-something]");
 var feedback_feedback_label = feedback_popup.querySelector("[name=write-something] + label");
 
-
-
 feedback_link.addEventListener("click", function(event) {
   event.preventDefault();
   feedback_popup.classList.add("modal-content-show");
@@ -100,12 +98,9 @@ feedback_feedback.addEventListener("blur", function(event) {
 });
 
 
-
 // email-subscribe
 var email_subscribe_input = document.querySelector("[name=email-subscribe]");
 var email_subscribe_label = document.querySelector("[name=email-subscribe] + label");
-
-
 
 email_subscribe_input.addEventListener("focus", function(event) {
   if (email_subscribe_label.classList.contains("label-blur")) {
@@ -123,7 +118,6 @@ email_subscribe_input.addEventListener("blur", function(event) {
     email_subscribe_label.classList.add("label-blur");
   }
 });
-
 
 
 // map
@@ -148,3 +142,25 @@ function init(){
 
     myMap.geoObjects.add(myPlacemark);
 }
+
+
+// slider
+function switchSlide() {
+  var checkboxes = document.querySelectorAll(".slide-checked");
+  var slideLength = checkboxes.length;
+  var currentSlide = +document.querySelector(".slide-checked:checked").getAttribute("data-id");
+  var nextSlide;
+
+  if (currentSlide === slideLength) {
+    nextSlide = 1;
+  } else {
+    nextSlide = currentSlide + 1;
+  }
+  var nextElement = document.querySelector('.slide-checked[data-id="' + nextSlide + '"]');
+  checkboxes.forEach(function(elem, id) {
+    elem.checked = false;
+  });
+  nextElement.checked = true;
+}
+
+setInterval(switchSlide, 5000);

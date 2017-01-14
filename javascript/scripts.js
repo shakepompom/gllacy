@@ -1,32 +1,3 @@
-// var input = document.querySelectorAll("fieldset > input");
-// var label = document.querySelectorAll("fieldset > label");
-//
-//
-// for(var i=0; i < input.length; i++) {
-//   input[i].addEventListener("focus", function(event) {
-//     for(var j=i; j < label.length; j++) {
-//       if (label[j].classList.contains("label-blur")) {
-//         label[j].classList.remove("label-blur");
-//         label[j].classList.add("label-focus");
-//       } else {
-//         label[j].classList.add("label-focus");
-//       }
-//     };
-//   });
-//
-//   input[i].addEventListener("blur", function(event) {
-//     for(var j=i; j < label.length; j++) {
-//       if (!input.value) {
-//         label[j].classList.remove("label-focus");
-//       } else {
-//         label[j].classList.add("label-blur");
-//       }
-//     };
-//   });
-// };
-
-
-
 // popup-search
 var search_link = document.querySelector(".user-panel-search");
 var search_popup = document.querySelector(".modal-content-search");
